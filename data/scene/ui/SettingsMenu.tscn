@@ -1,0 +1,366 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4pf0l65ojqcw"]
+
+[ext_resource type="Script" path="res://src/ui/SettingsMenu.gd" id="1_khwxh"]
+[ext_resource type="Script" path="res://src/ui/DynamicButton.gd" id="2_qejdm"]
+[ext_resource type="FontVariation" uid="uid://ckx3gh6vh6t5e" path="res://data/theme_elements/bold_font_variation.tres" id="2_stvgj"]
+[ext_resource type="Script" path="res://src/ui/DynamicLabel.gd" id="3_r1aba"]
+[ext_resource type="Script" path="res://src/ui/VolumeSlider.gd" id="4_mugbr"]
+[ext_resource type="Script" path="res://src/ui/KeybindMapButton.gd" id="5_es3m5"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_exarq"]
+color = Color(1, 1, 1, 0.356863)
+grow_begin = 16.0
+grow_end = 16.0
+thickness = 2
+
+[node name="SettingsMenu" type="VBoxContainer"]
+custom_minimum_size = Vector2(308, 2.08165e-12)
+offset_right = 308.0
+offset_bottom = 1252.0
+script = ExtResource("1_khwxh")
+
+[node name="DynamicLabel" type="Label" parent="."]
+self_modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_stvgj")
+theme_override_font_sizes/font_size = 64
+text = "Settings"
+script = ExtResource("3_r1aba")
+json_text = "ui/settings"
+
+[node name="Spacer" type="Control" parent="."]
+custom_minimum_size = Vector2(2.08165e-12, 16)
+layout_mode = 2
+
+[node name="SaveButton" type="Button" parent="."]
+layout_mode = 2
+text = "Save"
+script = ExtResource("2_qejdm")
+json_text = "ui/save"
+grab_initial_focus = true
+
+[node name="Graphics" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Graffix: COOL"
+script = ExtResource("2_qejdm")
+
+[node name="Spacer8" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="VolumePanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(2.08165e-12, 240)
+layout_mode = 2
+
+[node name="VolumePanelContainer" type="VBoxContainer" parent="VolumePanel"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label3" type="Label" parent="VolumePanel/VolumePanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Master Volume"
+script = ExtResource("3_r1aba")
+json_text = "ui/master_volume"
+
+[node name="MasterVol" type="HSlider" parent="VolumePanel/VolumePanelContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource("4_mugbr")
+bus = null
+
+[node name="Spacer11" type="Control" parent="VolumePanel/VolumePanelContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 8)
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VolumePanel/VolumePanelContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxLine_exarq")
+
+[node name="Spacer12" type="Control" parent="VolumePanel/VolumePanelContainer"]
+custom_minimum_size = Vector2(2.08165e-12, 8)
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="VolumePanel/VolumePanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Music Volume"
+script = ExtResource("3_r1aba")
+json_text = "ui/music_volume"
+
+[node name="MusicVol" type="HSlider" parent="VolumePanel/VolumePanelContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource("4_mugbr")
+bus = 1
+
+[node name="Spacer9" type="Control" parent="VolumePanel/VolumePanelContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="VolumePanel/VolumePanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "SFX Volume"
+script = ExtResource("3_r1aba")
+json_text = "ui/sfx_volume"
+
+[node name="SFXVol" type="HSlider" parent="VolumePanel/VolumePanelContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource("4_mugbr")
+bus = 2
+
+[node name="Spacer10" type="Control" parent="VolumePanel/VolumePanelContainer"]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="Label6" type="Label" parent="VolumePanel/VolumePanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Interface Volume"
+script = ExtResource("3_r1aba")
+json_text = "ui/ui_volume"
+
+[node name="SFXVol2" type="HSlider" parent="VolumePanel/VolumePanelContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource("4_mugbr")
+bus = 3
+
+[node name="Spacer9" type="Control" parent="."]
+custom_minimum_size = Vector2(2.08165e-12, 32)
+layout_mode = 2
+
+[node name="DynamicLabel2" type="Label" parent="."]
+self_modulate = Color(1, 1, 1, 0.447059)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_stvgj")
+theme_override_font_sizes/font_size = 64
+text = "Keybinds"
+script = ExtResource("3_r1aba")
+json_text = "ui/keybinds"
+
+[node name="Keybinds" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(308, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="Spacer" type="Control" parent="Keybinds"]
+custom_minimum_size = Vector2(2.08165e-12, 8)
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="Keybinds"]
+custom_minimum_size = Vector2(308, 2.08165e-12)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Auto keybinds will assign a number to a tool depending on its order of pickup.
+
+Custom keybinds allow you to set a key that always applies to a given tool."
+autowrap_mode = 2
+script = ExtResource("3_r1aba")
+
+[node name="Spacer2" type="Control" parent="Keybinds"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="DefaultsButton" type="Button" parent="Keybinds"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enable Custom Keybinds"
+script = ExtResource("2_qejdm")
+
+[node name="Spacer4" type="Control" parent="Keybinds"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="KeybindContainerBuildTool" type="HBoxContainer" parent="Keybinds"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Keybinds/KeybindContainerBuildTool"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.611765, 0.611765, 0.811765, 1)
+text = "Build Tool"
+script = ExtResource("3_r1aba")
+
+[node name="TypePicker" type="Button" parent="Keybinds/KeybindContainerBuildTool"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+script = ExtResource("5_es3m5")
+
+[node name="KeybindContainerBouncyball" type="HBoxContainer" parent="Keybinds"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Keybinds/KeybindContainerBouncyball"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.611765, 0.611765, 0.811765, 1)
+text = "Bouncyball"
+script = ExtResource("3_r1aba")
+
+[node name="TypePicker" type="Button" parent="Keybinds/KeybindContainerBouncyball"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+script = ExtResource("5_es3m5")
+default_key = 50
+keybind_for_what = "BouncyballTool"
+
+[node name="KeybindContainerBat" type="HBoxContainer" parent="Keybinds"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Keybinds/KeybindContainerBat"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.611765, 0.611765, 0.811765, 1)
+text = "Bat"
+script = ExtResource("3_r1aba")
+
+[node name="TypePicker" type="Button" parent="Keybinds/KeybindContainerBat"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+script = ExtResource("5_es3m5")
+default_key = 51
+keybind_for_what = "BatTool"
+
+[node name="KeybindContainerExtinguisher" type="HBoxContainer" parent="Keybinds"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Keybinds/KeybindContainerExtinguisher"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.611765, 0.611765, 0.811765, 1)
+text = "Extinguisher"
+script = ExtResource("3_r1aba")
+
+[node name="TypePicker" type="Button" parent="Keybinds/KeybindContainerExtinguisher"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+script = ExtResource("5_es3m5")
+default_key = 52
+keybind_for_what = "ExtinguisherTool"
+
+[node name="KeybindContainerRocket" type="HBoxContainer" parent="Keybinds"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Keybinds/KeybindContainerRocket"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.611765, 0.611765, 0.811765, 1)
+text = "Rocket"
+script = ExtResource("3_r1aba")
+
+[node name="TypePicker" type="Button" parent="Keybinds/KeybindContainerRocket"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+script = ExtResource("5_es3m5")
+default_key = 53
+keybind_for_what = "RocketTool"
+
+[node name="KeybindContainerBomb" type="HBoxContainer" parent="Keybinds"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Keybinds/KeybindContainerBomb"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.611765, 0.611765, 0.811765, 1)
+text = "Bomb"
+script = ExtResource("3_r1aba")
+
+[node name="TypePicker" type="Button" parent="Keybinds/KeybindContainerBomb"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+script = ExtResource("5_es3m5")
+default_key = 54
+keybind_for_what = "BombTool"
+
+[node name="KeybindContainerFlamethrower" type="HBoxContainer" parent="Keybinds"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Keybinds/KeybindContainerFlamethrower"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.611765, 0.611765, 0.811765, 1)
+text = "Flamethrower"
+script = ExtResource("3_r1aba")
+
+[node name="TypePicker" type="Button" parent="Keybinds/KeybindContainerFlamethrower"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+script = ExtResource("5_es3m5")
+default_key = 55
+keybind_for_what = "FlamethrowerTool"
+
+[node name="KeybindContainerMissile" type="HBoxContainer" parent="Keybinds"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Keybinds/KeybindContainerMissile"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.611765, 0.611765, 0.811765, 1)
+text = "Missiles"
+script = ExtResource("3_r1aba")
+
+[node name="TypePicker" type="Button" parent="Keybinds/KeybindContainerMissile"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+script = ExtResource("5_es3m5")
+default_key = 56
+keybind_for_what = "MissileTool"
+
+[node name="KeybindContainerPaintbrush" type="HBoxContainer" parent="Keybinds"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Keybinds/KeybindContainerPaintbrush"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.611765, 0.611765, 0.811765, 1)
+text = "Paintbrush"
+script = ExtResource("3_r1aba")
+
+[node name="TypePicker" type="Button" parent="Keybinds/KeybindContainerPaintbrush"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+script = ExtResource("5_es3m5")
+default_key = 57
+keybind_for_what = "PaintbrushTool"
+
+[node name="KeybindContainerPulseCannon" type="HBoxContainer" parent="Keybinds"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Keybinds/KeybindContainerPulseCannon"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.611765, 0.611765, 0.811765, 1)
+text = "Pulse Cannon"
+script = ExtResource("3_r1aba")
+
+[node name="TypePicker" type="Button" parent="Keybinds/KeybindContainerPulseCannon"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1"
+script = ExtResource("5_es3m5")
+default_key = 48
+keybind_for_what = "PulseCannonTool"
+
+[node name="Spacer2" type="Control" parent="."]
+custom_minimum_size = Vector2(2.08165e-12, 16)
+layout_mode = 2
