@@ -1,0 +1,192 @@
+[gd_scene load_steps=18 format=3 uid="uid://227kic5617ga"]
+
+[ext_resource type="Script" path="res://src/Camera.gd" id="1"]
+[ext_resource type="Animation" uid="uid://2t1dvsdwkiht" path="res://data/animation/camera/intro.res" id="2_c4qs1"]
+[ext_resource type="Material" uid="uid://bo38d2joh47t4" path="res://data/materials/camera_water_overlay.tres" id="2_togp0"]
+[ext_resource type="Animation" uid="uid://dbl1eyp0l5u06" path="res://data/animation/camera/intro_alt.res" id="3_vdhlv"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_m42ml"]
+auto_exposure_enabled = true
+dof_blur_far_distance = 60.0
+dof_blur_far_transition = 30.0
+dof_blur_amount = 0.04
+auto_exposure_min_sensitivity = 200.0
+auto_exposure_max_sensitivity = 1600.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jfe4s"]
+material = ExtResource("2_togp0")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_da3n1"]
+radius = 0.3
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4cukj"]
+radius = 0.001
+
+[sub_resource type="Curve" id="Curve_y3tlc"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.451327, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_876jb"]
+curve = SubResource("Curve_y3tlc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_q6ur4"]
+emission_shape_scale = Vector3(1, 5, 1)
+emission_shape = 6
+emission_ring_axis = Vector3(0, 1, 0)
+emission_ring_height = 0.25
+emission_ring_radius = 0.25
+emission_ring_inner_radius = 0.25
+gravity = Vector3(0, -1, 0)
+linear_accel_min = 30.0
+linear_accel_max = 40.0
+scale_curve = SubResource("CurveTexture_876jb")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_110a6"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+specular_mode = 2
+albedo_color = Color(1, 1, 1, 0.227451)
+billboard_keep_scale = true
+point_size = 4.5
+use_particle_trails = true
+
+[sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_dpfye"]
+material = SubResource("StandardMaterial3D_110a6")
+size = 0.002
+
+[sub_resource type="Animation" id="Animation_3fan0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 2, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.174533, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bbcbh"]
+resource_name = "move_to_left_side"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 2, 4), Vector3(-2, 2, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.174533, 0, 0), Vector3(-0.174533, 1.0472, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kd2k8"]
+resource_name = "move_to_right_side"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 2, 4), Vector3(2, 2, 4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.174533, 0, 0), Vector3(-0.174533, -1.0472, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vcqc4"]
+_data = {
+"RESET": SubResource("Animation_3fan0"),
+"intro": ExtResource("2_c4qs1"),
+"intro_alt": ExtResource("3_vdhlv"),
+"move_to_left_side": SubResource("Animation_bbcbh"),
+"move_to_right_side": SubResource("Animation_kd2k8")
+}
+
+[node name="CameraGimbal" type="Node3D"]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 0, 2, 4)
+
+[node name="Camera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 0, 2, 4)
+attributes = SubResource("CameraAttributesPractical_m42ml")
+fov = 55.0
+near = 0.1
+script = ExtResource("1")
+
+[node name="WaterOverlay" type="MeshInstance3D" parent="Camera"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -0.314685)
+visible = false
+mesh = SubResource("PlaneMesh_jfe4s")
+
+[node name="IntersectionArea" type="Area3D" parent="Camera"]
+collision_layer = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera/IntersectionArea"]
+shape = SubResource("SphereShape3D_da3n1")
+
+[node name="WaterArea" type="Area3D" parent="Camera"]
+collision_layer = 512
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera/WaterArea"]
+shape = SubResource("SphereShape3D_4cukj")
+
+[node name="SpeedTrails" type="GPUParticles3D" parent="Camera"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+cast_shadow = 0
+emitting = false
+amount = 128
+lifetime = 0.3
+local_coords = true
+trail_enabled = true
+trail_lifetime = 0.8
+process_material = SubResource("ParticleProcessMaterial_q6ur4")
+draw_pass_1 = SubResource("RibbonTrailMesh_dpfye")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Camera")
+libraries = {
+"": SubResource("AnimationLibrary_vcqc4")
+}
