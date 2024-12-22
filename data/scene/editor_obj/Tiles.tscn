@@ -5,6 +5,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pf348"]
 resource_name = "colormap"
 cull_mode = 2
+albedo_color = Color(0.129412, 0.85098, 0.615686, 1)
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_rrsqh"]
