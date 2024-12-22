@@ -10,7 +10,19 @@ extends CSGBox3D
 	$Game1, $Game2, $Game3, $Game4, $Game5
 ]
 
+var polling_interval: float = 5.0  # Time in seconds between API calls
+var polling_timer: Timer
+
 func _ready() -> void:
+	# Create a Timer for periodic API calls
+	polling_timer = Timer.new()
+	polling_timer.wait_time = polling_interval
+	polling_timer.autostart = true
+	polling_timer.one_shot = false
+	add_child(polling_timer)
+	polling_timer.timeout.connect(fetch_player_data)
+	
+	# Fetch data immediately on start
 	fetch_player_data()
 
 func fetch_player_data() -> void:
