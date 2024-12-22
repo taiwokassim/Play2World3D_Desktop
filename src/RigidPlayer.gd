@@ -268,14 +268,16 @@ func _on_body_entered(body : Node3D) -> void:
 		if (body is RigidBody3D) && !(body is RigidPlayer):
 			if (body.linear_velocity.length() + body.angular_velocity.length()) > 4:
 				if _state != STANDING_UP && _state != IN_SEAT:
-					if body == standing_on_object:
-						return
+					if standing_on_object != null:
+						if body == standing_on_object:
+							return
 					# take damage from fast bricks hitting player
 					# unless they are part of the group the player is standing on
 					if body is Brick:
-						if standing_on_object is Brick:
-							if body.group == standing_on_object.group:
-								return
+						if standing_on_object != null:
+							if standing_on_object is Brick:
+								if body.group == standing_on_object.group:
+									return
 						reduce_health(body.mass_mult as int, CauseOfDeath.HIT_BY_BRICK)
 					change_state.rpc_id(get_multiplayer_authority(), TRIPPED)
 			if body is Brick:
@@ -1737,6 +1739,13 @@ func increment_kills() -> void:
 	kills += 1
 	update_kills.rpc(kills)
 
+# for fun
+@rpc("any_peer", "call_local", "reliable")
+func set_model_size(new : int = 1) -> void:
+	if multiplayer.get_remote_sender_id() != 1:
+		return
+	character_model.scale = Vector3(new, new, new)
+
 func protect_spawn(time : float = 3.5, overlay := true) -> void:
 	_receive_server_protect_spawn.rpc(time, overlay)
 	invulnerable = true
@@ -1792,10 +1801,12 @@ func set_jump_force(new : float) -> void:
 func align_character_model_normal(ground_normal : Vector3) -> void:
 	# make sure we only align model in supported states
 	if _state == SLIDE || _state == SLIDE_BACK || _state == DEAD:
+		var old_scale : Vector3 = character_model.scale
 		# from: https://kidscancode.org/godot_recipes/3.x/3d/3d_align_surface/index.html
 		character_model.global_transform.basis.y = ground_normal
 		character_model.global_transform.basis.x = -character_model.global_transform.basis.z.cross(ground_normal)
 		character_model.global_transform.basis = character_model.global_transform.basis.orthonormalized()
+		character_model.scale = old_scale
 
 # for removing player from world
 func despawn() -> void:

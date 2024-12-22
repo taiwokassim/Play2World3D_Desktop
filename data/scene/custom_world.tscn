@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://bniiovr2mn0cl"]
+
+[ext_resource type="Script" path="res://src/Teams.gd" id="1_cqy3w"]
+[ext_resource type="Resource" uid="uid://qabpabfggsdp" path="res://data/team.tres" id="2_xshml"]
+[ext_resource type="Resource" uid="uid://cimhewj2wn54n" path="res://data/green_team.tres" id="3_pim2t"]
+[ext_resource type="Resource" uid="uid://r855pcta01ie" path="res://data/purple_team.tres" id="4_07cmg"]
+
+[node name="CustomWorld" type="Node3D"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+size = Vector3(1000, 1, 1000)
+
+[node name="Teams" type="Node" parent="."]
+script = ExtResource("1_cqy3w")
+team_list = Array[Resource]([ExtResource("2_xshml"), ExtResource("3_pim2t"), ExtResource("4_07cmg")])

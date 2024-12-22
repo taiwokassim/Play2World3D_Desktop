@@ -1,0 +1,45 @@
+[gd_scene load_steps=11 format=3 uid="uid://6jl62aanwead"]
+
+[ext_resource type="Script" path="res://src/Map.gd" id="1_xogm4"]
+[ext_resource type="Script" path="res://src/Teams.gd" id="2_8aad2"]
+[ext_resource type="Resource" uid="uid://qabpabfggsdp" path="res://data/team.tres" id="3_s6xir"]
+[ext_resource type="Resource" uid="uid://cimhewj2wn54n" path="res://data/green_team.tres" id="4_yq7ej"]
+[ext_resource type="Resource" uid="uid://r855pcta01ie" path="res://data/purple_team.tres" id="5_0ygfs"]
+[ext_resource type="PackedScene" uid="uid://35d1c4e36hab" path="res://data/scene/editor_obj/Tiles.tscn" id="7_qdf0n"]
+[ext_resource type="PackedScene" uid="uid://ydb61ihdv0ee" path="res://data/scene/editor_obj/Scoreboard.tscn" id="7_r8me1"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_20qs4"]
+sky_top_color = Color(0.685566, 0.615091, 0.735107, 1)
+sky_horizon_color = Color(0.720143, 0.73833, 0.884369, 1)
+ground_bottom_color = Color(0.195007, 0.338228, 0.802368, 1)
+ground_horizon_color = Color(0.720143, 0.73833, 0.884369, 1)
+
+[sub_resource type="Sky" id="Sky_tros3"]
+sky_material = SubResource("ProceduralSkyMaterial_20qs4")
+
+[sub_resource type="Environment" id="Environment_m22ot"]
+background_mode = 2
+sky = SubResource("Sky_tros3")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Play2World" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0)
+script = ExtResource("1_xogm4")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.178369, 0.467102, 0, 0.934204, 0.356738, -0.5, 0.308944, -0.809045, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_m22ot")
+
+[node name="Teams" type="Node" parent="."]
+script = ExtResource("2_8aad2")
+team_list = Array[Resource]([ExtResource("3_s6xir"), ExtResource("4_yq7ej"), ExtResource("5_0ygfs")])
+
+[node name="Tiles" parent="." instance=ExtResource("7_qdf0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.15096, 0)
+
+[node name="Scoreboard" parent="." instance=ExtResource("7_r8me1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -58)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://de5w30v7u4ohu"]
+[gd_scene load_steps=17 format=3 uid="uid://de5w30v7u4ohu"]
 
 [ext_resource type="Script" path="res://src/Map.gd" id="1_l0mnu"]
 [ext_resource type="AudioStream" uid="uid://dqqfcxecttbyn" path="res://data/audio/outdoorambience.ogg" id="2_biee4"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://n3thihpum35l" path="res://data/models/picnic_table/picnic_table.blend" id="7_i07ln"]
 [ext_resource type="Resource" uid="uid://r855pcta01ie" path="res://data/purple_team.tres" id="8_mhxoh"]
 [ext_resource type="Texture2D" uid="uid://fcce6nsnj7qq" path="res://data/textures/caution.png" id="10_gsw7i"]
-[ext_resource type="PackedScene" uid="uid://bnv3iultks1fi" path="res://data/scene/minigame/KingsHill.tscn" id="12_5ritw"]
 [ext_resource type="Script" path="res://src/Building.gd" id="12_duo6k"]
 [ext_resource type="PackedScene" uid="uid://3fiodktyscht" path="res://data/scene/pickup/Pickup.tscn" id="16_na7cl"]
 
@@ -34,7 +33,6 @@ albedo_texture = ExtResource("10_gsw7i")
 [node name="Frozen Field" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0)
 script = ExtResource("1_l0mnu")
-songs = Array[String](["frozenfield"])
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_biee4")
@@ -158,8 +156,18 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ywqan")
 [node name="OutroSpot" type="Marker3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0.5, 21)
 
-[node name="KingsHill" parent="." instance=ExtResource("12_5ritw")]
+[node name="KingsHill" parent="."]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.4, 0)
+script = null
 
 [node name="Pickup" parent="." instance=ExtResource("16_na7cl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 11)
@@ -191,7 +199,6 @@ type = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.5, 2)
 type = 3
 ammo = 80
-only_in_sandbox = true
 
 [node name="Node3D" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

@@ -81,8 +81,8 @@ properties/1/replication_mode = 2
 [node name="WaterProjectile" type="RigidBody3D"]
 collision_mask = 11
 physics_material_override = SubResource("PhysicsMaterial_kcslu")
-max_contacts_reported = 1
 contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1_0xm6f")
 
 [node name="Area3D" type="Area3D" parent="."]

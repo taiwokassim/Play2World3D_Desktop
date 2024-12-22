@@ -19,6 +19,8 @@ class_name Main
 
 signal upnp_completed(error : Object)
 
+
+
 const PLAYER : PackedScene = preload("res://data/scene/character/RigidPlayer.tscn")
 const CAMERA : PackedScene = preload("res://data/scene/camera/Camera.tscn")
 const PORT = 30815
@@ -52,6 +54,9 @@ var server_version : int = 12020
 # add 'pre' at end for pre-release
 var display_version := "beta 12.2pre"
 
+# Preload the custom world scene
+const CUSTOM_WORLD : PackedScene = preload("res://data/scene/custom_world.tscn")
+
 @onready var host_button : Button = $MultiplayerMenu/PlayMenu/HostHbox/Host
 @onready var host_public_button : Button = $MultiplayerMenu/HostSettingsMenu/HostPublic
 @onready var join_button : Button = $MultiplayerMenu/PlayMenu/JoinHbox/Join
@@ -59,6 +64,7 @@ var display_version := "beta 12.2pre"
 @onready var join_address : LineEdit = $MultiplayerMenu/PlayMenu/JoinHbox/Address
 @onready var host_map_selector : MapList = $MultiplayerMenu/HostSettingsMenu/MapList
 @onready var editor_button : Button = $MultiplayerMenu/MainMenu/Editor
+@onready var world_button : Button = $MultiplayerMenu/MainMenu/World
 @onready var tutorial_button : Button = $MultiplayerMenu/MainMenu/Tutorial
 
 func _ready() -> void:
@@ -80,6 +86,7 @@ func _ready() -> void:
 	join_button.connect("pressed", _on_join_pressed)
 	editor_button.connect("pressed", _on_editor_pressed)
 	tutorial_button.connect("pressed", _on_tutorial_pressed)
+	world_button.connect("pressed", _on_world_button_pressed)
 	
 	# Scan for LAN servers.
 	get_tree().current_scene.add_child(lan_listener)
@@ -337,6 +344,34 @@ func _on_join_pressed(address : Variant = null, is_from_list := false) -> void:
 	get_tree().current_scene.get_node("MultiplayerMenu").visible = false
 	get_tree().current_scene.get_node("GameCanvas").visible = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	
+# Change to the custom world scene
+func _on_world_button_pressed() -> void:
+	if get_display_name_from_field() == null:
+		return
+	Global.display_name = get_display_name_from_field()
+	
+	# Change button text to notify user server is starting.
+	editor_button.text = "Loading world..."
+	editor_button.disabled = true
+	
+	
+	get_tree().current_scene.get_node("MultiplayerMenu").visible = false
+	get_tree().current_scene.get_node("EditorCanvas").visible = false
+	get_tree().current_scene.get_node("GameCanvas").visible = true
+
+	
+	# Editor is single player.
+	var world : World = $World
+	world.load_map.call_deferred(load(str("res://data/scene/BaseWorld/Play2World.tscn")))
+	await Signal(world, "map_loaded")
+	# add camera
+	var camera_inst : Node3D = CAMERA.instantiate()
+	world.add_child(camera_inst, true)
+	
+	add_peer(multiplayer.get_unique_id())
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
 
 # Entering the world editor.
 func _on_editor_pressed() -> void:
