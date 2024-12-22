@@ -1,0 +1,22 @@
+[gd_scene load_steps=8 format=3 uid="uid://b61gee46yibex"]
+
+[ext_resource type="Script" path="res://src/Map.gd" id="1_xogm4"]
+[ext_resource type="Script" path="res://src/Teams.gd" id="2_8aad2"]
+[ext_resource type="Resource" uid="uid://qabpabfggsdp" path="res://data/team.tres" id="3_s6xir"]
+[ext_resource type="Resource" uid="uid://cimhewj2wn54n" path="res://data/green_team.tres" id="4_yq7ej"]
+[ext_resource type="Resource" uid="uid://r855pcta01ie" path="res://data/purple_team.tres" id="5_0ygfs"]
+[ext_resource type="PackedScene" uid="uid://35d1c4e36hab" path="res://data/scene/editor_obj/Tiles.tscn" id="7_qdf0n"]
+[ext_resource type="PackedScene" uid="uid://ydb61ihdv0ee" path="res://data/scene/editor_obj/Scoreboard.tscn" id="7_r8me1"]
+
+[node name="Play2World" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0)
+script = ExtResource("1_xogm4")
+
+[node name="Teams" type="Node" parent="."]
+script = ExtResource("2_8aad2")
+team_list = Array[Resource]([ExtResource("3_s6xir"), ExtResource("4_yq7ej"), ExtResource("5_0ygfs")])
+
+[node name="Tiles" parent="." instance=ExtResource("7_qdf0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.15096, 0)
+
+[node name="Scoreboard" parent="." instance=ExtResource("7_r8me1")]

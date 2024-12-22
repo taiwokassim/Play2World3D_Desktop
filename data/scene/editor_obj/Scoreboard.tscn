@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://ydb61ihdv0ee"]
+
+[ext_resource type="Script" path="res://src/TBWObject.gd" id="1_rrxc2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aaal4"]
+size = Vector3(101.758, 50.3322, 1)
+
+[node name="Scoreboard" type="StaticBody3D"]
+script = ExtResource("1_rrxc2")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 33.6606, 0)
+size = Vector3(100, 50, 1)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.0685, -29.342, 0)
+size = Vector3(2, 10, 1)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.208, -29.342, 0)
+size = Vector3(2, 10, 1)
+
+[node name="Label3D" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 22, 0.6)
+text = "Scoreboard"
+
+[node name="Label3D2" type="Label3D" parent="CSGBox3D"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -37.2232, 17.7765, 0.6)
+text = "Processing..."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000495911, 33.5286, 0)
+shape = SubResource("BoxShape3D_aaal4")

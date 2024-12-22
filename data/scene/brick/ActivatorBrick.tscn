@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c2pwwy57eoilm"]
+[gd_scene load_steps=12 format=3 uid="uid://cg5hec7oppd3f"]
 
 [ext_resource type="Script" path="res://src/ActivatorBrick.gd" id="1_w1b6s"]
 [ext_resource type="Script" path="res://addons/smoothing/smoothing.gd" id="2_rvino"]
@@ -32,8 +32,8 @@ collision_mask = 3
 mass = 10.0
 physics_material_override = SubResource("PhysicsMaterial_osnen")
 freeze = true
-max_contacts_reported = 1
 contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1_w1b6s")
 _brick_spawnable_type = "brick_activator"
 

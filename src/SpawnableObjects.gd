@@ -36,6 +36,7 @@ extends Node
 	"obj_sign": load("res://data/scene/editor_obj/Sign.tscn"),
 	"obj_spawnpoint": load("res://data/scene/editor_obj/SpawnPoint.tscn"),
 	"obj_dining_table": load("res://data/scene/editor_obj/DiningTable.tscn"),
+	"scoreboard": load("res://data/scene/editor_obj/Scoreboard.tscn"),
 	# UTILITY
 	"obj_camera_preview_point": load("res://data/scene/editor_obj/CameraPreviewPoint.tscn"),
 	# TRACK PIECES
@@ -68,6 +69,7 @@ extends Node
 	"brick_wedge": load("res://data/scene/brick/WedgeBrick.tscn"),
 	"brick_explosive": load("res://data/scene/brick/ExplosiveBrick.tscn"),
 	"brick_activator": load("res://data/scene/brick/ActivatorBrick.tscn"),
+	
 }
 
 # Returns a list of items spawnable by the Editor.

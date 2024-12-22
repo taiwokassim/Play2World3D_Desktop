@@ -63,7 +63,3 @@ func _physics_process(delta : float) -> void:
 				
 		else:
 			drive.rpc(acceleration, steering)
-
-
-
-
