@@ -4,7 +4,6 @@
 [ext_resource type="Script" path="res://src/Billboard.gd" id="2_j2r5v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aaal4"]
-size = Vector3(101.758, 50.3322, 1)
 
 [node name="Scoreboard" type="StaticBody3D"]
 script = ExtResource("1_rrxc2")
