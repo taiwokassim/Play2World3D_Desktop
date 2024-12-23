@@ -36,7 +36,7 @@ extends Node
 	"obj_sign": load("res://data/scene/editor_obj/Sign.tscn"),
 	"obj_spawnpoint": load("res://data/scene/editor_obj/SpawnPoint.tscn"),
 	"obj_dining_table": load("res://data/scene/editor_obj/DiningTable.tscn"),
-	"scoreboard": load("res://data/scene/editor_obj/Scoreboard.tscn"),
+	"scoreboard": load("res://data/scene/Play2World/Scoreboard.tscn"),
 	# UTILITY
 	"obj_camera_preview_point": load("res://data/scene/editor_obj/CameraPreviewPoint.tscn"),
 	# TRACK PIECES

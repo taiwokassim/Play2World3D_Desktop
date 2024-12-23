@@ -37,7 +37,7 @@ noise = SubResource("FastNoiseLite_duv0x")
 [resource]
 render_priority = 0
 shader = ExtResource("1_vdl18")
-shader_parameter/albedo = Color(0.262745, 0.635294, 0.956863, 1)
+shader_parameter/albedo = Color(0, 0.305882, 0.956863, 1)
 shader_parameter/albedo2 = Color(0.0862745, 0.184314, 0.301961, 1)
 shader_parameter/metallic = 0.0
 shader_parameter/roughness = 0.02
@@ -54,7 +54,7 @@ shader_parameter/depth_offset = -0.75
 shader_parameter/edge_scale = 0.66
 shader_parameter/near = 1.0
 shader_parameter/far = 100.0
-shader_parameter/edge_color = Color(1, 1, 1, 1)
+shader_parameter/edge_color = Color(0, 0, 0.870588, 1)
 shader_parameter/wave = SubResource("NoiseTexture2D_iotmo")
 shader_parameter/texture_normal = SubResource("NoiseTexture2D_hicvp")
 shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_htwdj")
