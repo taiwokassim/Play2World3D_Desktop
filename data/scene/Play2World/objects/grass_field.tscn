@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=3 uid="uid://fh7pr8rud1c2"]
+
+[ext_resource type="PackedScene" uid="uid://d25tspws7udiu" path="res://data/assets/environment_kit/Grass_1.fbx" id="1_ajsnn"]
+[ext_resource type="PackedScene" uid="uid://dhwm86eogvkae" path="res://data/assets/environment_kit/Grass_2.fbx" id="2_xgt1p"]
+[ext_resource type="PackedScene" uid="uid://ba2w1wgjh2h36" path="res://data/assets/nature_kit/FBX/Grass_Common_Short.fbx" id="3_rf6pd"]
+[ext_resource type="PackedScene" uid="uid://b0rylmkpdkfb2" path="res://data/assets/nature_kit/FBX/Grass_Common_Tall.fbx" id="4_7h65j"]
+[ext_resource type="PackedScene" uid="uid://bnry84sraqfto" path="res://data/assets/nature_kit/FBX/Grass_Wispy_Short.fbx" id="5_4no7j"]
+[ext_resource type="PackedScene" uid="uid://b4bl7q2n7bm2m" path="res://data/assets/nature_kit/FBX/Grass_Wispy_Tall.fbx" id="6_vamta"]
+
+[node name="GrassField" type="Node3D"]
+
+[node name="Grass_1" parent="." instance=ExtResource("1_ajsnn")]
+
+[node name="Grass_2" parent="." instance=ExtResource("2_xgt1p")]
+
+[node name="Grass_Common_Short" parent="." instance=ExtResource("3_rf6pd")]
+
+[node name="Grass_Common_Tall" parent="." instance=ExtResource("4_7h65j")]
+
+[node name="Grass_Wispy_Short" parent="." instance=ExtResource("5_4no7j")]
+
+[node name="Grass_Wispy_Tall" parent="." instance=ExtResource("6_vamta")]

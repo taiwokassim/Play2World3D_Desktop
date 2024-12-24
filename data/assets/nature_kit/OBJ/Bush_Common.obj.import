@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bj8f5q8ywupj6"
+path="res://.godot/imported/Bush_Common.obj-6f4c7b531183e7957aa4d7b3b29ddf6b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bush_Common.obj-6f4c7b531183e7957aa4d7b3b29ddf6b.mesh"]
+
+source_file="res://data/assets/nature_kit/OBJ/Bush_Common.obj"
+dest_files=["res://.godot/imported/Bush_Common.obj-6f4c7b531183e7957aa4d7b3b29ddf6b.mesh", "res://.godot/imported/Bush_Common.obj-6f4c7b531183e7957aa4d7b3b29ddf6b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

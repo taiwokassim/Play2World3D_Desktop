@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0l2frfw41mga"
+path="res://.godot/imported/Mushroom_Laetiporus.obj-1f03a2d6472746dc22f5ca9fa97db94f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Mushroom_Laetiporus.obj-1f03a2d6472746dc22f5ca9fa97db94f.mesh"]
+
+source_file="res://data/assets/nature_kit/OBJ/Mushroom_Laetiporus.obj"
+dest_files=["res://.godot/imported/Mushroom_Laetiporus.obj-1f03a2d6472746dc22f5ca9fa97db94f.mesh", "res://.godot/imported/Mushroom_Laetiporus.obj-1f03a2d6472746dc22f5ca9fa97db94f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

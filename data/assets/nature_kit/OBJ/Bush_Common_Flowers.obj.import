@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b08qo2dut54n3"
+path="res://.godot/imported/Bush_Common_Flowers.obj-09b3d82a4fb6f57e7a026a3df379116a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bush_Common_Flowers.obj-09b3d82a4fb6f57e7a026a3df379116a.mesh"]
+
+source_file="res://data/assets/nature_kit/OBJ/Bush_Common_Flowers.obj"
+dest_files=["res://.godot/imported/Bush_Common_Flowers.obj-09b3d82a4fb6f57e7a026a3df379116a.mesh", "res://.godot/imported/Bush_Common_Flowers.obj-09b3d82a4fb6f57e7a026a3df379116a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

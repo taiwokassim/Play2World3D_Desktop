@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dxc4rtt4qrywd"
+path="res://.godot/imported/Petal_5.obj-9bb167aa3a27d1848a1a0f7e96f8ef02.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Petal_5.obj-9bb167aa3a27d1848a1a0f7e96f8ef02.mesh"]
+
+source_file="res://data/assets/nature_kit/OBJ/Petal_5.obj"
+dest_files=["res://.godot/imported/Petal_5.obj-9bb167aa3a27d1848a1a0f7e96f8ef02.mesh", "res://.godot/imported/Petal_5.obj-9bb167aa3a27d1848a1a0f7e96f8ef02.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
