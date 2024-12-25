@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dbv7xvbqvmyx0"]
+[gd_scene load_steps=16 format=3 uid="uid://dbv7xvbqvmyx0"]
 
 [ext_resource type="PackedScene" uid="uid://35d1c4e36hab" path="res://data/scene/Play2World/Tiles.tscn" id="1_jdpov"]
 [ext_resource type="PackedScene" uid="uid://cpr4gkdgaqdna" path="res://data/scene/Play2World/objects/side_walls_long.tscn" id="3_0qtuh"]
@@ -13,6 +13,8 @@
 [ext_resource type="MeshLibrary" uid="uid://5wqib7lorv8r" path="res://data/assets/meshes/terrain_mesh_library.tres" id="10_ciuds"]
 [ext_resource type="PackedScene" uid="uid://dlhpoul7bw8pe" path="res://data/scene/Play2World/FlatSandRock.tscn" id="11_4v55h"]
 [ext_resource type="PackedScene" uid="uid://bli85viymfi46" path="res://data/scene/Play2World/PondWater.tscn" id="12_mf4gs"]
+[ext_resource type="PackedScene" uid="uid://cv357lpsarl4t" path="res://data/scene/Play2World/BridgePass.tscn" id="13_wrusw"]
+[ext_resource type="PackedScene" uid="uid://dmvynggpoqy7p" path="res://data/scene/Play2World/NarrowBlock.tscn" id="14_kqccr"]
 
 [node name="Map0" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -151,6 +153,12 @@ transform = Transform3D(-0.200223, 0, -0.97975, 0, 1, 0, 0.97975, 0, -0.200223, 
 
 [node name="PondWater" parent="Ground" instance=ExtResource("12_mf4gs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.532, -5.5, 28.82)
+
+[node name="Bridge" parent="Ground" instance=ExtResource("13_wrusw")]
+transform = Transform3D(0.0438636, 0, 0.999038, 0, 1, 0, -0.999038, 0, 0.0438636, -63.3781, 13.9099, -31.7595)
+
+[node name="NarrowBlock" parent="Ground" instance=ExtResource("14_kqccr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -190.563, -4.72783, -33.9386)
 
 [node name="Trees" type="Node3D" parent="."]
 
