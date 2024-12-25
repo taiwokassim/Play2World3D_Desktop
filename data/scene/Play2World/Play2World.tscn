@@ -44,21 +44,22 @@ script = ExtResource("2_5qeng")
 team_list = Array[Resource]([ExtResource("3_ga8db"), ExtResource("4_drxag"), ExtResource("5_81ibd")])
 
 [node name="Water" parent="." instance=ExtResource("8_i50fu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, -10)
 
 [node name="Map0" parent="." instance=ExtResource("8_fwb67")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Map1" parent="." instance=ExtResource("8_csnha")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1084.84, 1.5, -169.527)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1084.84, 0, -169.527)
 
 [node name="Map2" parent="." instance=ExtResource("10_6eyy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -174.39, 1.5, -1153.84)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -174.39, 0, -1153.84)
 
 [node name="Map3" parent="." instance=ExtResource("11_kk0of")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1130.17, 1.5, -89.8882)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1130.17, 0, -89.8882)
 
 [node name="Map4" parent="." instance=ExtResource("12_6u8j7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 438.915, 1.5, 1076.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 438.915, 0, 1076.9)
 
 [node name="Map5" parent="." instance=ExtResource("13_tterk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -778.884, 1.5, 1054.32)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -778.884, 0, 1054.32)
