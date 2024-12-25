@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dvt5df44t72ma"
+path="res://.godot/imported/Cave_Terrain_Side_Top.obj-e585e5f621aa08e78ad0ae138c344680.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cave_Terrain_Side_Top.obj-e585e5f621aa08e78ad0ae138c344680.mesh"]
+
+source_file="res://data/assets/terrain_kit/Cave_Terrain_Side_Top.obj"
+dest_files=["res://.godot/imported/Cave_Terrain_Side_Top.obj-e585e5f621aa08e78ad0ae138c344680.mesh", "res://.godot/imported/Cave_Terrain_Side_Top.obj-e585e5f621aa08e78ad0ae138c344680.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

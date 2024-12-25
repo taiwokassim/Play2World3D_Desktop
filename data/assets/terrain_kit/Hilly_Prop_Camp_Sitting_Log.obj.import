@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bla7vwoxx8b8y"
+path="res://.godot/imported/Hilly_Prop_Camp_Sitting_Log.obj-493f73f256c7669d03a4c8f8d6e46151.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Prop_Camp_Sitting_Log.obj-493f73f256c7669d03a4c8f8d6e46151.mesh"]
+
+source_file="res://data/assets/terrain_kit/Hilly_Prop_Camp_Sitting_Log.obj"
+dest_files=["res://.godot/imported/Hilly_Prop_Camp_Sitting_Log.obj-493f73f256c7669d03a4c8f8d6e46151.mesh", "res://.godot/imported/Hilly_Prop_Camp_Sitting_Log.obj-493f73f256c7669d03a4c8f8d6e46151.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

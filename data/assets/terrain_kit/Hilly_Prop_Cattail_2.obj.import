@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bxu4c3t8n0vuw"
+path="res://.godot/imported/Hilly_Prop_Cattail_2.obj-6966a2e54bfe7994a9df960e58449c33.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Prop_Cattail_2.obj-6966a2e54bfe7994a9df960e58449c33.mesh"]
+
+source_file="res://data/assets/terrain_kit/Hilly_Prop_Cattail_2.obj"
+dest_files=["res://.godot/imported/Hilly_Prop_Cattail_2.obj-6966a2e54bfe7994a9df960e58449c33.mesh", "res://.godot/imported/Hilly_Prop_Cattail_2.obj-6966a2e54bfe7994a9df960e58449c33.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

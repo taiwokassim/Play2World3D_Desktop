@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dbqk1xmupkybo"
+path="res://.godot/imported/Beach_Terrain_Sand_Side_Sharp.obj-1dc0f9c092c4cb9fa5a34e655603c8b9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Beach_Terrain_Sand_Side_Sharp.obj-1dc0f9c092c4cb9fa5a34e655603c8b9.mesh"]
+
+source_file="res://data/assets/terrain_kit/Beach_Terrain_Sand_Side_Sharp.obj"
+dest_files=["res://.godot/imported/Beach_Terrain_Sand_Side_Sharp.obj-1dc0f9c092c4cb9fa5a34e655603c8b9.mesh", "res://.godot/imported/Beach_Terrain_Sand_Side_Sharp.obj-1dc0f9c092c4cb9fa5a34e655603c8b9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
