@@ -47,7 +47,7 @@ team_list = Array[Resource]([ExtResource("3_ga8db"), ExtResource("4_drxag"), Ext
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -39.3182, -10)
 
 [node name="Map0" parent="." instance=ExtResource("8_fwb67")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -15, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -29, 0)
 
 [node name="Map1" parent="." instance=ExtResource("8_csnha")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1084.84, -15, -169.527)
