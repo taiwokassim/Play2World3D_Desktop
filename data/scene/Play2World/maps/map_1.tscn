@@ -1,6 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1lliatyo3jtu"]
+[gd_scene load_steps=18 format=3 uid="uid://b1lliatyo3jtu"]
 
 [ext_resource type="PackedScene" uid="uid://35d1c4e36hab" path="res://data/scene/Play2World/Tiles.tscn" id="1_c2ski"]
+[ext_resource type="PackedScene" uid="uid://cv357lpsarl4t" path="res://data/scene/Play2World/BridgePass.tscn" id="2_558ad"]
+[ext_resource type="PackedScene" uid="uid://dmvynggpoqy7p" path="res://data/scene/Play2World/NarrowBlock.tscn" id="3_j3jel"]
+[ext_resource type="PackedScene" uid="uid://4oxbsvjjnrjd" path="res://data/scene/Play2World/SlopeBlock.tscn" id="4_17uxq"]
+[ext_resource type="PackedScene" uid="uid://b7thekyah17uv" path="res://data/scene/Play2World/screens/Screen1.tscn" id="5_cokoj"]
+[ext_resource type="PackedScene" uid="uid://b2oywjvergj3j" path="res://data/scene/Play2World/signboard/BoardPlay2Help.tscn" id="5_glll8"]
+[ext_resource type="PackedScene" uid="uid://deogfgyy36b78" path="res://data/scene/Play2World/screens/Screen2.tscn" id="6_44n5y"]
+[ext_resource type="PackedScene" uid="uid://qp0ru4vtfwr3" path="res://data/scene/Play2World/screens/Screen3.tscn" id="7_5sfcq"]
+[ext_resource type="PackedScene" uid="uid://cx8a6a7070mt5" path="res://data/scene/Play2World/screens/Screen4.tscn" id="8_a6o4m"]
+[ext_resource type="PackedScene" uid="uid://dyqbolpdc6u4o" path="res://data/scene/Play2World/screens/Screen5.tscn" id="9_qrpqo"]
+[ext_resource type="PackedScene" uid="uid://bshpi2dtoy14n" path="res://data/scene/Play2World/screens/Screen6.tscn" id="10_c3sgv"]
+[ext_resource type="PackedScene" uid="uid://ht7j3swhvkpk" path="res://data/scene/Play2World/screens/Screen7.tscn" id="11_2olxe"]
+[ext_resource type="PackedScene" uid="uid://x4nnt2eeheth" path="res://data/scene/Play2World/screens/Screen8.tscn" id="12_kli3e"]
+[ext_resource type="PackedScene" uid="uid://bfuc6kooh5fmy" path="res://data/scene/Play2World/screens/Screen9.tscn" id="13_35gyw"]
+[ext_resource type="PackedScene" uid="uid://ydb61ihdv0ee" path="res://data/scene/Play2World/Scoreboard.tscn" id="15_78wdb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p76du"]
+albedo_color = Color(0.173606, 0.295257, 0.414138, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16a80"]
+albedo_color = Color(0.639486, 0.712092, 1, 1)
 
 [node name="Map1" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -8,8 +28,92 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="Ground" type="Node3D" parent="."]
 
 [node name="Tiles" parent="Ground" instance=ExtResource("1_c2ski")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -146.972)
+
+[node name="BridgeConnector" type="Node3D" parent="Ground"]
+
+[node name="Bridge2" parent="Ground/BridgeConnector" instance=ExtResource("2_558ad")]
+transform = Transform3D(0.0608046, 0, 0.99815, 0, 1, 0, -0.99815, 0, 0.0608046, 596.573, -0.471852, -408.978)
+
+[node name="SlopeBlock" parent="Ground/BridgeConnector" instance=ExtResource("4_17uxq")]
+transform = Transform3D(-0.0633798, 0, -1.999, 0, 2, 0, 1.999, 0, -0.0633798, 467.242, -1.10476, -413.159)
+
+[node name="SlopeBlock2" parent="Ground/BridgeConnector" instance=ExtResource("4_17uxq")]
+transform = Transform3D(-0.129413, 0, 1.99581, 0, 2, 0, -1.99581, 0, -0.129413, 618.114, -1.10476, -404.547)
+
+[node name="Signboard" parent="Ground/BridgeConnector" instance=ExtResource("5_glll8")]
+transform = Transform3D(-0.0914843, 0, 0.995807, 0, 1, 0, -0.995807, 0, -0.0914843, 594.824, 0, -372.071)
+
+[node name="CenterLayout" type="Node3D" parent="Ground"]
+transform = Transform3D(0.994928, 0, -0.100587, 0, 1, 0, 0.100587, 0, 0.994928, -317.723, 0, -107.534)
+
+[node name="CenterCircle" type="CSGCylinder3D" parent="Ground/CenterLayout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 184.399, 0.6, -227.954)
+radius = 200.0
+height = 1.0
+sides = 9
+
+[node name="Screens" type="Node3D" parent="Ground/CenterLayout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.3, 0)
+
+[node name="Screen1" parent="Ground/CenterLayout/Screens" instance=ExtResource("5_cokoj")]
+transform = Transform3D(-0.704956, 0, -0.709251, 0, 1, 0, 0.709251, 0, -0.704956, 397.795, 0, -40.8518)
+
+[node name="Screen2" parent="Ground/CenterLayout/Screens" instance=ExtResource("6_44n5y")]
+transform = Transform3D(-0.965345, 0, -0.260976, 0, 1, 0, 0.260976, 0, -0.965345, 245.465, 0, 58.6975)
+
+[node name="Screen3" parent="Ground/CenterLayout/Screens" instance=ExtResource("7_5sfcq")]
+transform = Transform3D(-0.848085, 0, 0.52986, 0, 1, 0, -0.52986, 0, -0.848085, 37.3249, 0, 22.1622)
+
+[node name="Screen4" parent="Ground/CenterLayout/Screens" instance=ExtResource("8_a6o4m")]
+transform = Transform3D(-0.238584, 0, 0.971122, 0, 1, 0, -0.971122, 0, -0.238584, -89.2657, 0, -136.924)
+
+[node name="Screen5" parent="Ground/CenterLayout/Screens" instance=ExtResource("9_qrpqo")]
+transform = Transform3D(0.437492, 0, 0.899222, 0, 1, 0, -0.899222, 0, 0.437492, -83.8211, 0, -338.094)
+
+[node name="Screen6" parent="Ground/CenterLayout/Screens" instance=ExtResource("10_c3sgv")]
+transform = Transform3D(0.891268, 0, 0.453477, 0, 1, 0, -0.453477, 0, 0.891268, 47.2483, 0, -480.06)
+
+[node name="Screen7" parent="Ground/CenterLayout/Screens" instance=ExtResource("11_2olxe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216.881, 0, -515.685)
+
+[node name="Screen8" parent="Ground/CenterLayout/Screens" instance=ExtResource("12_kli3e")]
+transform = Transform3D(0.829818, 0, -0.558035, 0, 1, 0, 0.558035, 0, 0.829818, 381.152, 0, -438.674)
+
+[node name="Screen9" parent="Ground/CenterLayout/Screens" instance=ExtResource("13_35gyw")]
+transform = Transform3D(-0.0758141, 0, -0.997122, 0, 1, 0, 0.997122, 0, -0.0758141, 470.243, 0, -211.694)
+
+[node name="Leaderboar_layout" type="Node3D" parent="Ground"]
+transform = Transform3D(-0.817054, 0, 0.576561, 0, 1, 0, -0.576561, 0, -0.817054, 263.798, 0.6, -9.644)
+
+[node name="Scoreboard" parent="Ground/Leaderboar_layout" instance=ExtResource("15_78wdb")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -68.1853, 1, -18.034)
+
+[node name="scoreboard_layout" type="Node3D" parent="Ground/Leaderboar_layout"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -32.6077, 0, 50.5692)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Ground/Leaderboar_layout/scoreboard_layout"]
+radius = 150.0
+height = 1.0
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Ground/Leaderboar_layout/scoreboard_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+radius = 80.0
+height = 1.0
+smooth_faces = false
+material = SubResource("StandardMaterial3D_p76du")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Ground/Leaderboar_layout/scoreboard_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 107)
+size = Vector3(20, 1, 80)
+material = SubResource("StandardMaterial3D_16a80")
 
 [node name="Trees" type="Node3D" parent="."]
 
 [node name="Objects" type="Node3D" parent="."]
+
+[node name="Bridge" parent="Objects" instance=ExtResource("2_558ad")]
+transform = Transform3D(0.309449, 0, 0.950916, 0, 1, 0, -0.950916, 0, 0.309449, 578.843, 13.9099, -171.868)
+
+[node name="NarrowBlock" parent="Objects/Bridge" instance=ExtResource("3_j3jel")]
+transform = Transform3D(0.0438634, 0, -0.999037, 0, 1, 0, 0.999037, 0, 0.0438634, -3.40179, -18.6377, -127.158)

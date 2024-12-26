@@ -50,16 +50,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -39.3182, -10)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -29, 0)
 
 [node name="Map1" parent="." instance=ExtResource("8_csnha")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1276.91, -15, -761.852)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -789.138, -29, 130.277)
 
 [node name="Map2" parent="." instance=ExtResource("10_6eyy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 251.657, -15, -1265.35)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 251.657, -29, -1341.86)
 
 [node name="Map3" parent="." instance=ExtResource("11_kk0of")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -799.143, -15, -1176.88)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -799.143, -29, -1094.72)
 
 [node name="Map4" parent="." instance=ExtResource("12_6u8j7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1294.46, -15, 392.833)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1375.86, -29, 311.149)
 
 [node name="Map5" parent="." instance=ExtResource("13_tterk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -927.144, -15, -63.2899)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1356.29, -29, -832.157)

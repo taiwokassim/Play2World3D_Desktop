@@ -64,13 +64,13 @@ transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_qxi40")
 
 [node name="tree2" parent="." instance=ExtResource("2_dubdl")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -6.73374, 25, 2.00773)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -6.28965, 25, 4.28091)
 
 [node name="rocks2" parent="." instance=ExtResource("4_ag7e7")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.71974, 25, 0.786729)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -6.27565, 25, 3.05991)
 
 [node name="grass2" parent="." instance=ExtResource("6_8et53")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.95374, 25, 1.32266)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -5.50965, 25, 3.59584)
 
 [node name="sign2" parent="." instance=ExtResource("5_e5w3e")]
 transform = Transform3D(1.031, 0, -1.71378, 0, 2, 0, 1.71378, 0, 1.031, 2.9609, 25, -6.58323)
