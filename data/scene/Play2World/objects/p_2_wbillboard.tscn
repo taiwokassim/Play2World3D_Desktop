@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://c5ndqrparso5a"]
 
-[ext_resource type="Texture2D" uid="uid://brmw2xoudym2w" path="res://data/assets/p2w_logo.png" id="1_17nvi"]
+[ext_resource type="Texture2D" uid="uid://brmw2xoudym2w" path="res://data/assets/logo/p2w_logo.png" id="1_17nvi"]
 [ext_resource type="PackedScene" uid="uid://ca8xdpkas20bh" path="res://data/assets/dragon.glb" id="2_duq1o"]
 [ext_resource type="PackedScene" uid="uid://deytf1rfbw1h3" path="res://data/assets/tower_kit/detail-rocks-large.glb" id="3_e4yiw"]
 [ext_resource type="PackedScene" uid="uid://2ril5ob0jhjk" path="res://data/assets/tower_kit/detail-rocks.glb" id="4_wvh8y"]

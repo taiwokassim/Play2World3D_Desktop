@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brmw2xoudym2w"
-path.s3tc="res://.godot/imported/p2w_logo.png-8f4af3eff72c6a08fa7b42f4a6c0d6aa.s3tc.ctex"
+uid="uid://bd18fv2w0qsl0"
+path.s3tc="res://.godot/imported/p_2_help.png-ed3a9911c0b5e5d03e9dcf3185a79003.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://data/assets/p2w_logo.png"
-dest_files=["res://.godot/imported/p2w_logo.png-8f4af3eff72c6a08fa7b42f4a6c0d6aa.s3tc.ctex"]
+source_file="res://data/assets/logo/p_2_help.png"
+dest_files=["res://.godot/imported/p_2_help.png-ed3a9911c0b5e5d03e9dcf3185a79003.s3tc.ctex"]
 
 [params]
 
