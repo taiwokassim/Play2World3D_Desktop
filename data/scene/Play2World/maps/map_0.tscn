@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dbv7xvbqvmyx0"]
+[gd_scene load_steps=20 format=3 uid="uid://dbv7xvbqvmyx0"]
 
 [ext_resource type="PackedScene" uid="uid://35d1c4e36hab" path="res://data/scene/Play2World/Tiles.tscn" id="1_jdpov"]
 [ext_resource type="PackedScene" uid="uid://cpr4gkdgaqdna" path="res://data/scene/Play2World/objects/side_walls_long.tscn" id="3_0qtuh"]
@@ -15,6 +15,16 @@
 [ext_resource type="PackedScene" uid="uid://bli85viymfi46" path="res://data/scene/Play2World/PondWater.tscn" id="12_mf4gs"]
 [ext_resource type="PackedScene" uid="uid://cv357lpsarl4t" path="res://data/scene/Play2World/BridgePass.tscn" id="13_wrusw"]
 [ext_resource type="PackedScene" uid="uid://dmvynggpoqy7p" path="res://data/scene/Play2World/NarrowBlock.tscn" id="14_kqccr"]
+[ext_resource type="PackedScene" uid="uid://b52jus0cwn14j" path="res://data/scene/Play2World/Signboard.tscn" id="15_5lmt2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpn8r"]
+albedo_color = Color(0.585469, 0.839227, 0.983927, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yo8yo"]
+albedo_color = Color(0.173606, 0.295257, 0.414138, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mh7vo"]
+albedo_color = Color(0.639486, 0.712092, 1, 1)
 
 [node name="Map0" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -22,7 +32,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="Ground" type="Node3D" parent="."]
 
 [node name="Tiles" parent="Ground" instance=ExtResource("1_jdpov")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 290.601, -5, -275.561)
 
 [node name="Walls" type="Node3D" parent="Ground"]
 visible = false
@@ -80,13 +90,13 @@ data = {
 }
 
 [node name="water_surrond_rocks" type="Node3D" parent="Ground"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.227, 0.2, 1.55)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.227, 0.5, 1.55)
 
 [node name="FlatSandRock" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
 transform = Transform3D(-0.595594, 0, 0.803285, 0, 1, 0, -0.803285, 0, -0.595594, -4.71709, 0, -124.958)
 
 [node name="FlatSandRock2" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
-transform = Transform3D(0.284919, 0, 0.958552, 0, 1, 0, -0.958552, 0, 0.284919, 35.8765, 0, -122.7)
+transform = Transform3D(0.284919, 0, 0.958552, 0, 1, 0, -0.958552, 0, 0.284919, 35.8765, 0, -117.814)
 
 [node name="FlatSandRock3" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
 transform = Transform3D(-0.156762, 0, 0.987637, 0, 1, 0, -0.987637, 0, -0.156762, 85.3748, 0, -95.1031)
@@ -95,7 +105,7 @@ transform = Transform3D(-0.156762, 0, 0.987637, 0, 1, 0, -0.987637, 0, -0.156762
 transform = Transform3D(-0.156762, 0, 0.987637, 0, 1, 0, -0.987637, 0, -0.156762, 101.678, 0, -108.483)
 
 [node name="FlatSandRock4" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
-transform = Transform3D(0.512567, 0, 0.858647, 0, 1, 0, -0.858647, 0, 0.512567, 116.84, 0, -59.0531)
+transform = Transform3D(0.512567, 0, 0.858647, 0, 1, 0, -0.858647, 0, 0.512567, 110.433, 0, -56.0091)
 
 [node name="FlatSandRock5" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
 transform = Transform3D(0.512567, 0, 0.858647, 0, 1, 0, -0.858647, 0, 0.512567, 116.84, 0, -1.99123)
@@ -113,13 +123,13 @@ transform = Transform3D(0.999274, 0, -0.0381087, 0, 1, 0, 0.0381087, 0, 0.999274
 transform = Transform3D(1.98847, 0, -0.214472, 0, 2, 0, 0.214472, 0, 1.98847, 66.0782, 0, 151.702)
 
 [node name="FlatSandRock9" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
-transform = Transform3D(-0.809909, 0, 0.586556, 0, 1, 0, -0.586556, 0, -0.809909, 20.8088, 0, 173.567)
+transform = Transform3D(-0.809909, 0, 0.586556, 0, 1, 0, -0.586556, 0, -0.809909, 20.5865, 0, 173.567)
 
 [node name="FlatSandRock10" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
-transform = Transform3D(0.887373, 0, -0.461052, 0, 1, 0, 0.461052, 0, 0.887373, -36.9641, 0, 178.685)
+transform = Transform3D(0.887373, 0, -0.461052, 0, 1, 0, 0.461052, 0, 0.887373, -42.2822, 0, 175.028)
 
 [node name="FlatSandRock11" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
-transform = Transform3D(-0.481998, 0, 0.876172, 0, 1, 0, -0.876172, 0, -0.481998, -82.2377, 0, 181.359)
+transform = Transform3D(-0.481998, 0, 0.876172, 0, 1, 0, -0.876172, 0, -0.481998, -84.1765, 0, 181.359)
 
 [node name="FlatSandRock12" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
 transform = Transform3D(0.215826, 0, -0.976432, 0, 1, 0, 0.976432, 0, 0.215826, -140.188, 0, 150.695)
@@ -131,13 +141,13 @@ transform = Transform3D(-0.464514, 0, -1.94531, 0, 2, 0, 1.94531, 0, -0.464514, 
 transform = Transform3D(0.362682, 0, 0.931913, 0, 1, 0, -0.931913, 0, 0.362682, -171.291, 0, 117.688)
 
 [node name="FlatSandRock14" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
-transform = Transform3D(-0.403114, 0, -0.91515, 0, 1, 0, 0.91515, 0, -0.403114, -190.054, 0, 57.8579)
+transform = Transform3D(-0.403114, 0, -0.91515, 0, 1, 0, 0.91515, 0, -0.403114, -185.67, 0, 54.6968)
 
 [node name="FlatSandRock15" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
-transform = Transform3D(0.84341, 0, 0.53727, 0, 1, 0, -0.53727, 0, 0.84341, -195.63, 0, 12.8494)
+transform = Transform3D(0.84341, 0, 0.53727, 0, 1, 0, -0.53727, 0, 0.84341, -194.526, 0, 11.8614)
 
 [node name="FlatSandRock16" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
-transform = Transform3D(-0.797089, 0, -0.603862, 0, 1, 0, 0.603862, 0, -0.797089, -173.551, 0, -51.7069)
+transform = Transform3D(-0.797089, 0, -0.603862, 0, 1, 0, 0.603862, 0, -0.797089, -173.551, 0, -50.9822)
 
 [node name="FlatSandRock17" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
 transform = Transform3D(0.998221, 0, 0.0596201, 0, 1, 0, -0.0596201, 0, 0.998221, -156.549, 0, -93.7517)
@@ -146,7 +156,7 @@ transform = Transform3D(0.998221, 0, 0.0596201, 0, 1, 0, -0.0596201, 0, 0.998221
 transform = Transform3D(1.97386, 0, -0.322277, 0, 2, 0, 0.322277, 0, 1.97386, -162.511, -6.10352e-05, -115)
 
 [node name="FlatSandRock18" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
-transform = Transform3D(0.830217, 0, -0.557441, 0, 1, 0, 0.557441, 0, 0.830217, -74.6868, 0, -135.839)
+transform = Transform3D(0.830217, 0, -0.557441, 0, 1, 0, 0.557441, 0, 0.830217, -67.7748, 0, -133.059)
 
 [node name="FlatSandRock19" parent="Ground/water_surrond_rocks" instance=ExtResource("11_4v55h")]
 transform = Transform3D(-0.200223, 0, -0.97975, 0, 1, 0, 0.97975, 0, -0.200223, -103.283, 0, -117.651)
@@ -157,13 +167,88 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.532, -5.5, 28.82)
 [node name="Bridge" parent="Ground" instance=ExtResource("13_wrusw")]
 transform = Transform3D(0.0438636, 0, 0.999038, 0, 1, 0, -0.999038, 0, 0.0438636, -63.3781, 13.9099, -31.7595)
 
+[node name="Bridge3" parent="Ground" instance=ExtResource("13_wrusw")]
+transform = Transform3D(0.976349, 0, 0.216201, 0, 1, 0, -0.216201, 0, 0.976349, 43.6422, 12.9099, 165.886)
+
+[node name="Bridge2" parent="Ground" instance=ExtResource("13_wrusw")]
+transform = Transform3D(-0.460572, 0, 0.887623, 0, 1, 0, -0.887623, 0, -0.460572, 182.674, 6.65792, -108.552)
+
 [node name="NarrowBlock" parent="Ground" instance=ExtResource("14_kqccr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -190.563, -4.72783, -33.9386)
+
+[node name="NarrowBlock2" parent="Ground" instance=ExtResource("14_kqccr")]
+transform = Transform3D(-0.874078, 0, -0.485786, 0, 1, 0, 0.485786, 0, -0.874078, 201.86, -11.9898, -115.817)
+
+[node name="NarrowBlock3" parent="Ground" instance=ExtResource("14_kqccr")]
+transform = Transform3D(-0.243005, 0, 0.970025, 0, 1, 0, -0.970025, 0, -0.243005, 45.2447, -5.98981, 185.654)
 
 [node name="Trees" type="Node3D" parent="."]
 
 [node name="Objects" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="Scoreboard" parent="." instance=ExtResource("4_27kpg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5859, 1, -350.775)
+[node name="CircularVillage" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 481, -0.4, -424)
+
+[node name="circular_layout" type="Node3D" parent="CircularVillage"]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CircularVillage/circular_layout"]
+radius = 300.0
+height = 1.0
+material = SubResource("StandardMaterial3D_wpn8r")
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CircularVillage/circular_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+radius = 100.0
+height = 1.0
+material = SubResource("StandardMaterial3D_yo8yo")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="CircularVillage/circular_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+radius = 50.0
+height = 1.0
+
+[node name="Signboards" type="Node3D" parent="CircularVillage"]
+
+[node name="Signboard" parent="CircularVillage/Signboards" instance=ExtResource("15_5lmt2")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 72.7156, 0, -242.435)
+
+[node name="Signboard5" parent="CircularVillage/Signboards" instance=ExtResource("15_5lmt2")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -132.533, 0, -225.997)
+
+[node name="Signboard6" parent="CircularVillage/Signboards" instance=ExtResource("15_5lmt2")]
+transform = Transform3D(0.258819, 0, 0.965926, 0, 1, 0, -0.965926, 0, 0.258819, -243.695, 0, -92.5357)
+
+[node name="Signboard2" parent="CircularVillage/Signboards" instance=ExtResource("15_5lmt2")]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 243.813, 0, -88.921)
+
+[node name="Signboard3" parent="CircularVillage/Signboards" instance=ExtResource("15_5lmt2")]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, 222.546, 0, 117.621)
+
+[node name="Signboard4" parent="CircularVillage/Signboards" instance=ExtResource("15_5lmt2")]
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 62.6352, 0, 250.77)
+
+[node name="ScoreboardArea" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, -0.4, -424)
+
+[node name="Scoreboard" parent="ScoreboardArea" instance=ExtResource("4_27kpg")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -68.1853, 1, -18.034)
+
+[node name="scoreboard_layout" type="Node3D" parent="ScoreboardArea"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -32.6077, 0, 50.5692)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="ScoreboardArea/scoreboard_layout"]
+radius = 150.0
+height = 1.0
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="ScoreboardArea/scoreboard_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+radius = 80.0
+height = 1.0
+smooth_faces = false
+material = SubResource("StandardMaterial3D_yo8yo")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="ScoreboardArea/scoreboard_layout"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 107)
+size = Vector3(20, 1, 80)
+material = SubResource("StandardMaterial3D_mh7vo")

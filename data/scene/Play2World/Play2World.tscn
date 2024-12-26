@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://6jl62aanwead"]
+[gd_scene load_steps=16 format=3 uid="uid://dfefh1cw3vw0r"]
 
 [ext_resource type="Script" path="res://src/Map.gd" id="1_pco4e"]
 [ext_resource type="Script" path="res://src/Teams.gd" id="2_5qeng"]
@@ -50,16 +50,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -39.3182, -10)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -29, 0)
 
 [node name="Map1" parent="." instance=ExtResource("8_csnha")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1084.84, -15, -169.527)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1276.91, -15, -761.852)
 
 [node name="Map2" parent="." instance=ExtResource("10_6eyy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -174.39, -15, -1153.84)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 251.657, -15, -1265.35)
 
 [node name="Map3" parent="." instance=ExtResource("11_kk0of")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1130.17, -15, -89.8882)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -799.143, -15, -1176.88)
 
 [node name="Map4" parent="." instance=ExtResource("12_6u8j7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 438.915, -15, 1076.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1294.46, -15, 392.833)
 
 [node name="Map5" parent="." instance=ExtResource("13_tterk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -778.884, -15, 1054.32)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -927.144, -15, -63.2899)
