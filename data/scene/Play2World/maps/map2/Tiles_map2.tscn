@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://bwsmievc6gvje"]
+[gd_scene load_steps=7 format=4 uid="uid://bwsmievc6gvje"]
 
 [ext_resource type="Script" path="res://src/TBWObject.gd" id="1_bswau"]
 [ext_resource type="Texture2D" uid="uid://deqlnitgvsp13" path="res://data/assets/platformer_kit/Textures/colormap.png" id="2_xrr14"]
@@ -43,6 +43,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_sw8ir")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2vtht"]
+points = PackedVector3Array(-0.75369, 0.374951, -0.541062, -0.72638, 0.5, -0.50007, 0.753487, 0.374951, -0.541062, -0.72638, 0, -0.50007, -0.957093, 0.374951, -0.456958, -0.919999, 0.5, -0.419885, 0.726176, 0.5, -0.50007, 0.726176, 0, -0.50007, 0.956685, 0.374951, -0.456958, -0.919999, 0, -0.419885, -1.0001, 0, -0.226361, -1.04106, 0.374951, -0.253689, -1.0001, 0.5, -0.226361, 0.919592, 0.5, -0.419885, 0.919592, 0, -0.419885, 0.999893, 0.5, -0.226361, 1.04086, 0.374951, -0.253689, 0.999893, 0, -0.226361, -1.0001, 0, 0.226149, -1.04106, 0.374951, 0.253583, -1.0001, 0.5, 0.226149, 0.999893, 0.5, 0.226149, 1.04086, 0.374951, 0.253583, 0.999893, 0, 0.226149, -0.957093, 0.374951, 0.456852, -0.919999, 0, 0.419779, -0.919999, 0.5, 0.419779, 0.919592, 0.5, 0.419779, 0.956685, 0.374951, 0.456852, 0.919592, 0, 0.419779, -0.72638, 0, 0.499964, -0.75369, 0.374951, 0.541062, -0.72638, 0.5, 0.499964, 0.726176, 0.5, 0.499964, 0.753487, 0.374951, 0.541062, 0.726176, 0, 0.499964)
+
 [node name="Tiles_map2" type="StaticBody3D"]
 script = ExtResource("1_bswau")
 tbw_object_type = "obj_picnic_table"
@@ -51,3 +54,7 @@ tbw_object_type = "obj_picnic_table"
 transform = Transform3D(500, 0, 0, 0, 500, 0, 0, 0, 500, 0, 0, 0)
 mesh = SubResource("ArrayMesh_5656g")
 skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(500, 0, 0, 0, 500, 0, 0, 0, 500, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_2vtht")

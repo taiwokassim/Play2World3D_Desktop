@@ -1,14 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://bb785kyru02i"]
+[gd_scene load_steps=3 format=3 uid="uid://bb785kyru02i"]
 
-[ext_resource type="PackedScene" uid="uid://35d1c4e36hab" path="res://data/scene/Play2World/Tiles.tscn" id="1_2mmy5"]
+[ext_resource type="PackedScene" uid="uid://c6y5gu28uhccv" path="res://data/scene/Play2World/maps/map4/Tiles_map4.tscn" id="1_xriq2"]
+[ext_resource type="PackedScene" uid="uid://c6lb8247fbrcc" path="res://data/scene/Play2World/maps/map4/Tiles_lobby_map4.tscn" id="2_a8ir6"]
 
 [node name="Map4" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Ground" type="Node3D" parent="."]
 
-[node name="Tiles" parent="Ground" instance=ExtResource("1_2mmy5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
+[node name="Tiles_map2" parent="Ground" instance=ExtResource("1_xriq2")]
+
+[node name="tiles_lobby" parent="Ground" instance=ExtResource("2_a8ir6")]
+transform = Transform3D(-0.149104, 0, -0.988822, 0, 1, 0, 0.988822, 0, -0.149104, 459.325, 402.065, 90.774)
 
 [node name="Trees" type="Node3D" parent="."]
 

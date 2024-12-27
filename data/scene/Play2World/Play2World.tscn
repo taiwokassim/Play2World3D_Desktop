@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dfefh1cw3vw0r"]
+[gd_scene load_steps=17 format=3 uid="uid://dvv4pbnyftgl8"]
 
 [ext_resource type="Script" path="res://src/Map.gd" id="1_pco4e"]
 [ext_resource type="Script" path="res://src/Teams.gd" id="2_5qeng"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://mh7ovoqr22ms" path="res://data/scene/Play2World/maps/map2/map_2.tscn" id="10_6eyy1"]
 [ext_resource type="PackedScene" uid="uid://bcwh7ut700yg" path="res://data/scene/Play2World/maps/map3/map_3.tscn" id="11_kk0of"]
 [ext_resource type="PackedScene" uid="uid://bb785kyru02i" path="res://data/scene/Play2World/maps/map4/map_4.tscn" id="12_6u8j7"]
-[ext_resource type="PackedScene" uid="uid://f1ilxsxq05gx" path="res://data/scene/Play2World/maps/map5/map_5.tscn" id="13_tterk"]
+[ext_resource type="PackedScene" uid="uid://bwcarqagxhrlj" path="res://data/scene/Play2World/maps/map5/map_5.tscn" id="13_tterk"]
 [ext_resource type="PackedScene" uid="uid://uan7xu6y7rg7" path="res://data/scene/Play2World/maps/center_map/Tiles_bridge.tscn" id="13_xh0pv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_20qs4"]
@@ -54,18 +54,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -29, 0)
 transform = Transform3D(-0.668495, 0, -0.743717, 0, 1, 0, 0.743717, 0, -0.668495, -1105.22, -25.5432, -862.347)
 
 [node name="Map2" parent="." instance=ExtResource("10_6eyy1")]
-transform = Transform3D(0.444213, 0, -0.895921, 0, 1, 0, 0.895921, 0, 0.444213, -179.543, -317.269, -1404.62)
+transform = Transform3D(0.444213, 0, -0.895921, 0, 1, 0, 0.895921, 0, 0.444213, -314.049, -317.269, -1479.71)
 
 [node name="Map3" parent="." instance=ExtResource("11_kk0of")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -799.143, -29, -2202.81)
+transform = Transform3D(0.20798, 0, -0.978133, 0, 1, 0, 0.978133, 0, 0.20798, 649.521, -278.703, -1472.38)
 
 [node name="Map4" parent="." instance=ExtResource("12_6u8j7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1375.86, -29, 311.149)
+transform = Transform3D(-0.997069, 0, 0.0765102, 0, 1, 0, -0.0765102, 0, -0.997069, 939.139, -629.083, -529.409)
 
 [node name="Map5" parent="." instance=ExtResource("13_tterk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1356.29, -29, -832.157)
+transform = Transform3D(-0.972231, 0, -0.234022, 0, 1, 0, 0.234022, 0, -0.972231, 490.854, -179.37, 17.6519)
 
 [node name="Bridges" type="Node3D" parent="."]
 
 [node name="village_tiles" parent="Bridges" instance=ExtResource("13_xh0pv")]
 transform = Transform3D(0.974264, 0, 0.22541, 0, 1, 0, -0.22541, 0, 0.974264, -260.73, -52.6227, -455.384)
+
+[node name="village_tiles2" parent="Bridges" instance=ExtResource("13_xh0pv")]
+transform = Transform3D(0.415598, 0, -0.909548, 0, 1, 0, 0.909548, 0, 0.415598, -44.4818, -52.6227, -814.789)
+
+[node name="village_tiles3" parent="Bridges" instance=ExtResource("13_xh0pv")]
+transform = Transform3D(-0.528868, 0, -0.848704, 0, 1, 0, 0.848704, 0, -0.528868, 160.226, -52.6227, -801.802)
+
+[node name="village_tiles4" parent="Bridges" instance=ExtResource("13_xh0pv")]
+transform = Transform3D(0.974264, 0, 0.22541, 0, 1, 0, -0.22541, 0, 0.974264, 295.218, -52.6227, -609.71)
+
+[node name="village_tiles5" parent="Bridges" instance=ExtResource("13_xh0pv")]
+transform = Transform3D(0.625311, 0, -0.780376, 0, 1, 0, 0.780376, 0, 0.625311, 236.621, -52.6227, -344.826)

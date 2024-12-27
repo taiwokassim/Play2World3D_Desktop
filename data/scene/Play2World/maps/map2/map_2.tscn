@@ -11,7 +11,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="Tiles" parent="Ground" instance=ExtResource("1_u5muo")]
 
 [node name="Tiles_map2" parent="Ground" instance=ExtResource("2_mg5x7")]
-transform = Transform3D(-0.429771, 0, -0.902938, 0, 1, 0, 0.902938, 0, -0.429771, 476.243, 50.9316, 209.466)
+transform = Transform3D(-0.5515, 0, -0.834175, 0, 1, 0, 0.834175, 0, -0.5515, 530.13, 50.9316, 70.3377)
 
 [node name="Trees" type="Node3D" parent="."]
 
