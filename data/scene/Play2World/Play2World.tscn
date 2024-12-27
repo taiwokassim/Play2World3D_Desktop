@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://cimhewj2wn54n" path="res://data/green_team.tres" id="4_drxag"]
 [ext_resource type="Resource" uid="uid://r855pcta01ie" path="res://data/purple_team.tres" id="5_81ibd"]
 [ext_resource type="PackedScene" uid="uid://b1lliatyo3jtu" path="res://data/scene/Play2World/maps/map_1.tscn" id="8_csnha"]
-[ext_resource type="PackedScene" uid="uid://dbv7xvbqvmyx0" path="res://data/scene/Play2World/maps/map_0.tscn" id="8_fwb67"]
+[ext_resource type="PackedScene" uid="uid://dbv7xvbqvmyx0" path="res://data/scene/Play2World/maps/center_map/map_0.tscn" id="8_fwb67"]
 [ext_resource type="PackedScene" uid="uid://bga4pdoo5a2mi" path="res://data/scene/Play2World/SurfaceWater.tscn" id="8_i50fu"]
 [ext_resource type="PackedScene" uid="uid://mh7ovoqr22ms" path="res://data/scene/Play2World/maps/map_2.tscn" id="10_6eyy1"]
 [ext_resource type="PackedScene" uid="uid://bcwh7ut700yg" path="res://data/scene/Play2World/maps/map_3.tscn" id="11_kk0of"]
@@ -44,7 +44,7 @@ script = ExtResource("2_5qeng")
 team_list = Array[Resource]([ExtResource("3_ga8db"), ExtResource("4_drxag"), ExtResource("5_81ibd")])
 
 [node name="Water" parent="." instance=ExtResource("8_i50fu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -39.3182, -10)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -165.864, -10)
 
 [node name="Map0" parent="." instance=ExtResource("8_fwb67")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -29, 0)

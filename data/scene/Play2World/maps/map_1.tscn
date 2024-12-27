@@ -42,7 +42,7 @@ transform = Transform3D(-0.0633798, 0, -1.999, 0, 2, 0, 1.999, 0, -0.0633798, 46
 transform = Transform3D(-0.129413, 0, 1.99581, 0, 2, 0, -1.99581, 0, -0.129413, 618.114, -1.10476, -404.547)
 
 [node name="Signboard" parent="Ground/BridgeConnector" instance=ExtResource("5_glll8")]
-transform = Transform3D(-0.0914843, 0, 0.995807, 0, 1, 0, -0.995807, 0, -0.0914843, 594.824, 0, -372.071)
+transform = Transform3D(-0.0914843, 0, 0.995807, 0, 1, 0, -0.995807, 0, -0.0914843, 304.406, 0, -185.192)
 
 [node name="CenterLayout" type="Node3D" parent="Ground"]
 transform = Transform3D(0.994928, 0, -0.100587, 0, 1, 0, 0.100587, 0, 0.994928, -317.723, 0, -107.534)

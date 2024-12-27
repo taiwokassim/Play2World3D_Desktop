@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://d77wtx4ofpyc"]
+
+[ext_resource type="PackedScene" uid="uid://bwd8qxi0xi1el" path="res://data/scene/Play2World/maps/center_map/Tiles_village.tscn" id="1_us428"]
+[ext_resource type="PackedScene" uid="uid://b52jus0cwn14j" path="res://data/scene/Play2World/signboard/BoardPlay2Work.tscn" id="2_v0tsx"]
+[ext_resource type="PackedScene" uid="uid://b2oywjvergj3j" path="res://data/scene/Play2World/signboard/BoardPlay2Help.tscn" id="3_4rh0s"]
+[ext_resource type="PackedScene" uid="uid://b0xgtgav46tgp" path="res://data/scene/Play2World/signboard/BoardPlay2Health.tscn" id="4_j0j31"]
+[ext_resource type="PackedScene" uid="uid://e0155jt1b1k6" path="res://data/scene/Play2World/signboard/BoardPlay2Learn.tscn" id="5_apgln"]
+[ext_resource type="PackedScene" uid="uid://ctkx8l1qsdqar" path="res://data/scene/Play2World/signboard/BoardPlay2Love.tscn" id="6_3xf8v"]
+[ext_resource type="PackedScene" uid="uid://c1as0xt2ghey7" path="res://data/scene/Play2World/signboard/BoardPlay2LiveWell.tscn" id="7_uamj6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yo8yo"]
+albedo_color = Color(0.173606, 0.295257, 0.414138, 1)
+
+[node name="CircularVillage" type="Node3D"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0, -0.4, 0)
+
+[node name="village_tiles" parent="." instance=ExtResource("1_us428")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -57, 0)
+
+[node name="circular_layout" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 95, 0)
+visible = false
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="circular_layout"]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 1.93185, 0.1, 0.517638)
+radius = 100.0
+height = 1.0
+sides = 6
+material = SubResource("StandardMaterial3D_yo8yo")
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="circular_layout"]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0, 0.2, 0)
+radius = 50.0
+height = 1.0
+sides = 6
+
+[node name="Signboards" type="Node3D" parent="."]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.41421, 95, 7.07107)
+
+[node name="BoardPLay2Work" parent="Signboards" instance=ExtResource("2_v0tsx")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 119.369, 0, -121.195)
+
+[node name="BoardPlay2Help" parent="Signboards" instance=ExtResource("3_4rh0s")]
+transform = Transform3D(0.258819, 0, 0.965925, 0, 1, 0, -0.965925, 0, 0.258819, -148.232, 0, -40.5787)
+
+[node name="BoardPlay2Health" parent="Signboards" instance=ExtResource("4_j0j31")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -39.5186, 0, -157.815)
+
+[node name="BoardPlay2Learn" parent="Signboards" instance=ExtResource("5_apgln")]
+transform = Transform3D(-0.258819, 0, -0.965925, 0, 1, 0, 0.965925, 0, -0.258819, 162.702, 0, 36.4664)
+
+[node name="BoardPlay2Love" parent="Signboards" instance=ExtResource("6_3xf8v")]
+transform = Transform3D(-0.707106, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707106, -111.893, 0, 111.064)
+
+[node name="BoardPLay2LiveWell" parent="Signboards" instance=ExtResource("7_uamj6")]
+transform = Transform3D(-0.965925, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965925, 45.358, 0, 153.071)
