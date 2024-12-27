@@ -1,7 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://dbv7xvbqvmyx0"]
+[gd_scene load_steps=19 format=3 uid="uid://dbv7xvbqvmyx0"]
 
 [ext_resource type="PackedScene" uid="uid://cekjrjqcl4bu5" path="res://data/scene/Play2World/maps/center_map/Tiles_map0.tscn" id="1_1ddmg"]
-[ext_resource type="PackedScene" uid="uid://cpr4gkdgaqdna" path="res://data/scene/Play2World/objects/side_walls_long.tscn" id="3_0qtuh"]
 [ext_resource type="PackedScene" uid="uid://c5ndqrparso5a" path="res://data/scene/Play2World/objects/p_2_wbillboard.tscn" id="4_qbaij"]
 [ext_resource type="MeshLibrary" uid="uid://di6l4v2cdpa3m" path="res://data/assets/meshes/nature_mesh_library.tres" id="5_6vlbj"]
 [ext_resource type="MeshLibrary" uid="uid://cjhr2b027h35f" path="res://data/assets/meshes/grass_mesh_library.tres" id="5_u17ed"]
@@ -27,21 +26,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Tiles" parent="Ground" instance=ExtResource("1_1ddmg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -199, 30)
-
-[node name="Walls" type="Node3D" parent="Ground"]
-visible = false
-
-[node name="side_walls_long" parent="Ground/Walls" instance=ExtResource("3_0qtuh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.8613, 1, -274.958)
-
-[node name="side_walls_long4" parent="Ground/Walls" instance=ExtResource("3_0qtuh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.8613, 1, 117.616)
-
-[node name="side_walls_long2" parent="Ground/Walls" instance=ExtResource("3_0qtuh")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 186.117, 1, -145.049)
-
-[node name="side_walls_long3" parent="Ground/Walls" instance=ExtResource("3_0qtuh")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -209.055, 1, -145.049)
 
 [node name="LargeBlock" parent="Ground" instance=ExtResource("6_r57px")]
 

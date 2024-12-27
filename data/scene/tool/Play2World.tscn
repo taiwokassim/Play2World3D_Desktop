@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://mh7ovoqr22ms" path="res://data/scene/Play2World/maps/map2/map_2.tscn" id="9_frh1d"]
 [ext_resource type="PackedScene" uid="uid://bcwh7ut700yg" path="res://data/scene/Play2World/maps/map3/map_3.tscn" id="10_ptglc"]
 [ext_resource type="PackedScene" uid="uid://bb785kyru02i" path="res://data/scene/Play2World/maps/map4/map_4.tscn" id="11_8mjbp"]
-[ext_resource type="PackedScene" uid="uid://f1ilxsxq05gx" path="res://data/scene/Play2World/maps/map5/map_5.tscn" id="12_rn41v"]
+[ext_resource type="PackedScene" uid="uid://bwcarqagxhrlj" path="res://data/scene/Play2World/maps/map5/map_5.tscn" id="12_rn41v"]
 [ext_resource type="PackedScene" uid="uid://uan7xu6y7rg7" path="res://data/scene/Play2World/maps/center_map/Tiles_bridge.tscn" id="13_0372n"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_20qs4"]

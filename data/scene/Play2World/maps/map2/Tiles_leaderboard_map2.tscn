@@ -1,12 +1,12 @@
 [gd_scene load_steps=6 format=4 uid="uid://8bmt5ttryyeq"]
 
-[ext_resource type="Script" path="res://src/TBWObject.gd" id="1_veyfr"]
-[ext_resource type="Texture2D" uid="uid://deqlnitgvsp13" path="res://data/assets/platformer_kit/Textures/colormap.png" id="2_y1it6"]
+[ext_resource type="Script" path="res://src/TBWObject.gd" id="1_h4mav"]
+[ext_resource type="Texture2D" uid="uid://deqlnitgvsp13" path="res://data/assets/platformer_kit/Textures/colormap.png" id="2_kxki6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6yyjw"]
 resource_name = "colormap"
 cull_mode = 2
-albedo_texture = ExtResource("2_y1it6")
+albedo_texture = ExtResource("2_kxki6")
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_sw8ir"]
@@ -44,7 +44,7 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_sw8ir")
 
 [node name="Tiles_map2" type="StaticBody3D"]
-script = ExtResource("1_veyfr")
+script = ExtResource("1_h4mav")
 tbw_object_type = "obj_picnic_table"
 
 [node name="block-grass-low-long" type="MeshInstance3D" parent="."]

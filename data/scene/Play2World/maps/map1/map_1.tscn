@@ -8,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://dyqbolpdc6u4o" path="res://data/scene/Play2World/screens/Screen5.tscn" id="9_0bci1"]
 [ext_resource type="PackedScene" uid="uid://bshpi2dtoy14n" path="res://data/scene/Play2World/screens/Screen6.tscn" id="10_mve2r"]
 [ext_resource type="PackedScene" uid="uid://ht7j3swhvkpk" path="res://data/scene/Play2World/screens/Screen7.tscn" id="11_ho5oa"]
+[ext_resource type="PackedScene" uid="uid://djliiil2h1gan" path="res://data/scene/Play2World/maps/map1/Tiles_leaderboard_map1.tscn" id="11_os5vw"]
 [ext_resource type="PackedScene" uid="uid://x4nnt2eeheth" path="res://data/scene/Play2World/screens/Screen8.tscn" id="12_m82b5"]
 [ext_resource type="PackedScene" uid="uid://bfuc6kooh5fmy" path="res://data/scene/Play2World/screens/Screen9.tscn" id="13_6ubdy"]
 [ext_resource type="PackedScene" uid="uid://ydb61ihdv0ee" path="res://data/scene/Play2World/Scoreboard.tscn" id="15_7asho"]
-[ext_resource type="PackedScene" path="res://data/scene/Play2World/maps/map2/Tiles_leaderboard_map2.tscn" id="15_p1xxb"]
 [ext_resource type="PackedScene" uid="uid://dktumbf4pqrdw" path="res://data/scene/Play2World/maps/map1/small_floating_tiles.tscn" id="16_lm7o2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p76du"]
@@ -26,7 +26,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="Ground" type="Node3D" parent="."]
 
 [node name="CenterLayout" type="Node3D" parent="Ground"]
-transform = Transform3D(0.360941, 0, 0.932589, 0, 1, 0, -0.932589, 0, 0.360941, 17.6525, 0, -136.016)
+transform = Transform3D(0.0484138, 0, 0.998828, 0, 1, 0, -0.998828, 0, 0.0484138, 235.895, 0, -212.376)
 
 [node name="CenterCircle" type="CSGCylinder3D" parent="Ground/CenterLayout"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 184.399, 0.6, -227.954)
@@ -89,14 +89,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 107)
 size = Vector3(20, 1, 80)
 material = SubResource("StandardMaterial3D_16a80")
 
-[node name="map1_leaderrboard" parent="Ground/Leaderboar_layout" instance=ExtResource("15_p1xxb")]
-transform = Transform3D(1, 0, 2.23517e-08, 0, 1, 0, -2.23517e-08, 0, 1, -152.683, -405.25, -11.2782)
+[node name="map1_leaderrboard" parent="Ground/Leaderboar_layout" instance=ExtResource("11_os5vw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.764, -403.344, -26.0676)
 
 [node name="small_tiles" parent="Ground" instance=ExtResource("16_lm7o2")]
 transform = Transform3D(0.987963, 0, 0.154693, 0, 1, 0, -0.154693, 0, 0.987963, -148.563, -153.386, -853.034)
 
 [node name="Tiles" parent="Ground" instance=ExtResource("1_ks6er")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -129.672, -634.759, -373.979)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5987, -634.759, -415.139)
 
 [node name="Trees" type="Node3D" parent="."]
 
