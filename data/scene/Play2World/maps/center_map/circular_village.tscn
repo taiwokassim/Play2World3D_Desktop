@@ -15,7 +15,7 @@ albedo_color = Color(0.173606, 0.295257, 0.414138, 1)
 transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 0, -0.4, 0)
 
 [node name="village_tiles" parent="." instance=ExtResource("1_us428")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -57, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -104, 0)
 
 [node name="circular_layout" type="Node3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 95, 0)
@@ -38,19 +38,19 @@ sides = 6
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 1.41421, 95, 7.07107)
 
 [node name="BoardPLay2Work" parent="Signboards" instance=ExtResource("2_v0tsx")]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 119.369, 0, -121.195)
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 3.56083, 0, -197.632)
 
 [node name="BoardPlay2Help" parent="Signboards" instance=ExtResource("3_4rh0s")]
-transform = Transform3D(0.258819, 0, 0.965925, 0, 1, 0, -0.965925, 0, 0.258819, -148.232, 0, -40.5787)
+transform = Transform3D(-0.707106, 0, 0.707106, 0, 1, 0, -0.707106, 0, -0.707106, -147.193, 0, 147.037)
 
 [node name="BoardPlay2Health" parent="Signboards" instance=ExtResource("4_j0j31")]
-transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -39.5186, 0, -157.815)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -141.093, 0, -126.244)
 
 [node name="BoardPlay2Learn" parent="Signboards" instance=ExtResource("5_apgln")]
-transform = Transform3D(-0.258819, 0, -0.965925, 0, 1, 0, 0.965925, 0, -0.258819, 162.702, 0, 36.4664)
+transform = Transform3D(0.499999, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.499999, 155.304, 0, -135.626)
 
 [node name="BoardPlay2Love" parent="Signboards" instance=ExtResource("6_3xf8v")]
-transform = Transform3D(-0.707106, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707106, -111.893, 0, 111.064)
+transform = Transform3D(-0.258818, 0, 0.965926, 0, 1, 0, -0.965926, 0, -0.258818, -184.53, 0, 12.5763)
 
 [node name="BoardPLay2LiveWell" parent="Signboards" instance=ExtResource("7_uamj6")]
-transform = Transform3D(-0.965925, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965925, 45.358, 0, 153.071)
+transform = Transform3D(2.08616e-07, 0, -0.999999, 0, 1, 0, 0.999999, 0, 2.08616e-07, 197.521, 0, 23.8031)

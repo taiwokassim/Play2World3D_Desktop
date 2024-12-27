@@ -197,7 +197,7 @@ transform = Transform3D(0.708246, 0.163339, -0.686809, -0.0238983, 0.977856, 0.2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="CircularVillage" parent="." instance=ExtResource("15_xw5hy")]
-transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 21.1085, -92.4, -478.56)
+transform = Transform3D(0.422618, 0, -0.906307, 0, 1, 0, 0.906307, 0, 0.422618, 34.526, -95.4, -522.61)
 
 [node name="village_tiles" parent="." instance=ExtResource("18_xarn8")]
 transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, 17, -24, -223)

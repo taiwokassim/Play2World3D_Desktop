@@ -43,7 +43,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_qws3s")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fioa2"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vx35t"]
 points = PackedVector3Array(0.55, 0.374951, 0.317418, 0.499932, 0.5, 0.288573, -0.000107646, 0.374951, 0.635085, 0.499932, 2.00371e-30, 0.288573, 0.55, 0.374951, -0.317667, -0.000107646, 0.5, 0.577271, 0.499932, 0.5, -0.288698, -0.500039, 0.5, 0.288573, -0.55, 0.374951, 0.317418, -0.500039, 2.00371e-30, 0.288573, -0.000107646, 2.00371e-30, 0.577271, 0.499932, 2.00371e-30, -0.288698, -0.000107646, 2.00371e-30, -0.577395, -0.000107646, 0.374951, -0.635085, -0.000107646, 0.5, -0.577395, -0.500039, 0.5, -0.288698, -0.55, 0.374951, -0.317667, -0.500039, 2.00371e-30, -0.288698)
 
 [node name="village_tiles" type="StaticBody3D"]
@@ -51,10 +51,10 @@ script = ExtResource("1_upb3e")
 tbw_object_type = "obj_picnic_table"
 
 [node name="block-grass-low-hexagon" type="MeshInstance3D" parent="."]
-transform = Transform3D(300, 0, 0, 0, 300, 0, 0, 0, 300, 0, 0, 0)
+transform = Transform3D(400, 0, 0, 0, 400, 0, 0, 0, 400, 0, 0, 0)
 mesh = SubResource("ArrayMesh_dk4sl")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(200, 0, 0, 0, 200, 0, 0, 0, 200, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_fioa2")
+transform = Transform3D(400, 0, 0, 0, 400, 0, 0, 0, 400, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_vx35t")
