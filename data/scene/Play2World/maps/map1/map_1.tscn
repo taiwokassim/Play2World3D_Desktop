@@ -1,9 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://b1lliatyo3jtu"]
+[gd_scene load_steps=16 format=3 uid="uid://b1lliatyo3jtu"]
 
-[ext_resource type="PackedScene" uid="uid://b37hf8xovyuun" path="res://data/scene/Play2World/maps/map1/Tiles_map1.tscn" id="1_ks6er"]
-[ext_resource type="PackedScene" uid="uid://cv357lpsarl4t" path="res://data/scene/Play2World/BridgePass.tscn" id="2_7w8wy"]
-[ext_resource type="PackedScene" uid="uid://4oxbsvjjnrjd" path="res://data/scene/Play2World/SlopeBlock.tscn" id="3_mpnio"]
-[ext_resource type="PackedScene" uid="uid://b2oywjvergj3j" path="res://data/scene/Play2World/signboard/BoardPlay2Help.tscn" id="4_6f287"]
+[ext_resource type="PackedScene" uid="uid://oej335ccx6ta" path="res://data/scene/Play2World/maps/map1/Tiles_map1.tscn" id="1_ks6er"]
 [ext_resource type="PackedScene" uid="uid://b7thekyah17uv" path="res://data/scene/Play2World/screens/Screen1.tscn" id="5_weqsi"]
 [ext_resource type="PackedScene" uid="uid://deogfgyy36b78" path="res://data/scene/Play2World/screens/Screen2.tscn" id="6_vlhbw"]
 [ext_resource type="PackedScene" uid="uid://qp0ru4vtfwr3" path="res://data/scene/Play2World/screens/Screen3.tscn" id="7_vrttg"]
@@ -14,8 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://x4nnt2eeheth" path="res://data/scene/Play2World/screens/Screen8.tscn" id="12_m82b5"]
 [ext_resource type="PackedScene" uid="uid://bfuc6kooh5fmy" path="res://data/scene/Play2World/screens/Screen9.tscn" id="13_6ubdy"]
 [ext_resource type="PackedScene" uid="uid://ydb61ihdv0ee" path="res://data/scene/Play2World/Scoreboard.tscn" id="15_7asho"]
-[ext_resource type="PackedScene" uid="uid://djliiil2h1gan" path="res://data/scene/Play2World/maps/map1/Tiles_leaderboard.tscn" id="15_p1xxb"]
-[ext_resource type="PackedScene" uid="uid://dmvynggpoqy7p" path="res://data/scene/Play2World/NarrowBlock.tscn" id="16_ardid"]
+[ext_resource type="PackedScene" path="res://data/scene/Play2World/maps/map2/Tiles_leaderboard_map2.tscn" id="15_p1xxb"]
 [ext_resource type="PackedScene" uid="uid://dktumbf4pqrdw" path="res://data/scene/Play2World/maps/map1/small_floating_tiles.tscn" id="16_lm7o2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p76du"]
@@ -28,23 +24,6 @@ albedo_color = Color(0.639486, 0.712092, 1, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Ground" type="Node3D" parent="."]
-
-[node name="Tiles" parent="Ground" instance=ExtResource("1_ks6er")]
-transform = Transform3D(0.366794, 0, 0.930302, 0, 1, 0, -0.930302, 0, 0.366794, -140.908, -628.255, -366.433)
-
-[node name="BridgeConnector" type="Node3D" parent="Ground"]
-
-[node name="Bridge2" parent="Ground/BridgeConnector" instance=ExtResource("2_7w8wy")]
-transform = Transform3D(0.0608046, 0, 0.99815, 0, 1, 0, -0.99815, 0, 0.0608046, 596.573, -0.471852, -408.978)
-
-[node name="SlopeBlock" parent="Ground/BridgeConnector" instance=ExtResource("3_mpnio")]
-transform = Transform3D(-0.0633798, 0, -1.999, 0, 2, 0, 1.999, 0, -0.0633798, 467.242, -1.10476, -413.159)
-
-[node name="SlopeBlock2" parent="Ground/BridgeConnector" instance=ExtResource("3_mpnio")]
-transform = Transform3D(-0.129413, 0, 1.99581, 0, 2, 0, -1.99581, 0, -0.129413, 618.114, -1.10476, -404.547)
-
-[node name="Signboard" parent="Ground/BridgeConnector" instance=ExtResource("4_6f287")]
-transform = Transform3D(-0.0914843, 0, 0.995807, 0, 1, 0, -0.995807, 0, -0.0914843, 304.406, 0, -185.192)
 
 [node name="CenterLayout" type="Node3D" parent="Ground"]
 transform = Transform3D(0.360941, 0, 0.932589, 0, 1, 0, -0.932589, 0, 0.360941, 17.6525, 0, -136.016)
@@ -116,12 +95,9 @@ transform = Transform3D(1, 0, 2.23517e-08, 0, 1, 0, -2.23517e-08, 0, 1, -152.683
 [node name="small_tiles" parent="Ground" instance=ExtResource("16_lm7o2")]
 transform = Transform3D(0.987963, 0, 0.154693, 0, 1, 0, -0.154693, 0, 0.987963, -148.563, -153.386, -853.034)
 
+[node name="Tiles" parent="Ground" instance=ExtResource("1_ks6er")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -129.672, -634.759, -373.979)
+
 [node name="Trees" type="Node3D" parent="."]
 
 [node name="Objects" type="Node3D" parent="."]
-
-[node name="Bridge" parent="Objects" instance=ExtResource("2_7w8wy")]
-transform = Transform3D(0.309449, 0, 0.950916, 0, 1, 0, -0.950916, 0, 0.309449, 578.843, 13.9099, -171.868)
-
-[node name="NarrowBlock" parent="Objects/Bridge" instance=ExtResource("16_ardid")]
-transform = Transform3D(0.0438634, 0, -0.999037, 0, 1, 0, 0.999037, 0, 0.0438634, -3.40179, -18.6377, -127.158)

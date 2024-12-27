@@ -8,10 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://b1lliatyo3jtu" path="res://data/scene/Play2World/maps/map1/map_1.tscn" id="8_csnha"]
 [ext_resource type="PackedScene" uid="uid://dbv7xvbqvmyx0" path="res://data/scene/Play2World/maps/center_map/map_0.tscn" id="8_fwb67"]
 [ext_resource type="PackedScene" uid="uid://bga4pdoo5a2mi" path="res://data/scene/Play2World/SurfaceWater.tscn" id="8_i50fu"]
-[ext_resource type="PackedScene" uid="uid://mh7ovoqr22ms" path="res://data/scene/Play2World/maps/map_2.tscn" id="10_6eyy1"]
-[ext_resource type="PackedScene" uid="uid://bcwh7ut700yg" path="res://data/scene/Play2World/maps/map_3.tscn" id="11_kk0of"]
-[ext_resource type="PackedScene" uid="uid://bb785kyru02i" path="res://data/scene/Play2World/maps/map_4.tscn" id="12_6u8j7"]
-[ext_resource type="PackedScene" uid="uid://f1ilxsxq05gx" path="res://data/scene/Play2World/maps/map_5.tscn" id="13_tterk"]
+[ext_resource type="PackedScene" uid="uid://mh7ovoqr22ms" path="res://data/scene/Play2World/maps/map2/map_2.tscn" id="10_6eyy1"]
+[ext_resource type="PackedScene" uid="uid://bcwh7ut700yg" path="res://data/scene/Play2World/maps/map3/map_3.tscn" id="11_kk0of"]
+[ext_resource type="PackedScene" uid="uid://bb785kyru02i" path="res://data/scene/Play2World/maps/map4/map_4.tscn" id="12_6u8j7"]
+[ext_resource type="PackedScene" uid="uid://f1ilxsxq05gx" path="res://data/scene/Play2World/maps/map5/map_5.tscn" id="13_tterk"]
 [ext_resource type="PackedScene" uid="uid://uan7xu6y7rg7" path="res://data/scene/Play2World/maps/center_map/Tiles_bridge.tscn" id="13_xh0pv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_20qs4"]
@@ -54,10 +54,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -29, 0)
 transform = Transform3D(-0.668495, 0, -0.743717, 0, 1, 0, 0.743717, 0, -0.668495, -1105.22, -25.5432, -862.347)
 
 [node name="Map2" parent="." instance=ExtResource("10_6eyy1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 251.657, -29, -1341.86)
+transform = Transform3D(0.444213, 0, -0.895921, 0, 1, 0, 0.895921, 0, 0.444213, -179.543, -317.269, -1404.62)
 
 [node name="Map3" parent="." instance=ExtResource("11_kk0of")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -799.143, -29, -1453.84)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -799.143, -29, -2202.81)
 
 [node name="Map4" parent="." instance=ExtResource("12_6u8j7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1375.86, -29, 311.149)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://b37hf8xovyuun"]
+[gd_scene load_steps=7 format=4 uid="uid://oej335ccx6ta"]
 
 [ext_resource type="Script" path="res://src/TBWObject.gd" id="1_qy5qe"]
 [ext_resource type="Texture2D" uid="uid://deqlnitgvsp13" path="res://data/assets/platformer_kit/Textures/colormap.png" id="2_u4e33"]
