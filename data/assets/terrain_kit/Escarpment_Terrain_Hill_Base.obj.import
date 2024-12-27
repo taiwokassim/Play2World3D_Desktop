@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ctvj440bgwxpm"
+path="res://.godot/imported/Escarpment_Terrain_Hill_Base.obj-7e08c6edbec0146f6ad65d14770d9d27.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Escarpment_Terrain_Hill_Base.obj-7e08c6edbec0146f6ad65d14770d9d27.mesh"]
+
+source_file="res://data/assets/terrain_kit/Escarpment_Terrain_Hill_Base.obj"
+dest_files=["res://.godot/imported/Escarpment_Terrain_Hill_Base.obj-7e08c6edbec0146f6ad65d14770d9d27.mesh", "res://.godot/imported/Escarpment_Terrain_Hill_Base.obj-7e08c6edbec0146f6ad65d14770d9d27.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

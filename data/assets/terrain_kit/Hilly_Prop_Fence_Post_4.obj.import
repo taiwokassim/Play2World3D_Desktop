@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dlwdblrhp6c16"
+path="res://.godot/imported/Hilly_Prop_Fence_Post_4.obj-2800e1f791e1572fcb853f205d080e17.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Prop_Fence_Post_4.obj-2800e1f791e1572fcb853f205d080e17.mesh"]
+
+source_file="res://data/assets/terrain_kit/Hilly_Prop_Fence_Post_4.obj"
+dest_files=["res://.godot/imported/Hilly_Prop_Fence_Post_4.obj-2800e1f791e1572fcb853f205d080e17.mesh", "res://.godot/imported/Hilly_Prop_Fence_Post_4.obj-2800e1f791e1572fcb853f205d080e17.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

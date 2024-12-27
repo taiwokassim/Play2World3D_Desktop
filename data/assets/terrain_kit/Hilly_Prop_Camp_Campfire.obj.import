@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dckxnkskcdsn2"
+path="res://.godot/imported/Hilly_Prop_Camp_Campfire.obj-fd9dc431651e10f83e8211f11f693917.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Prop_Camp_Campfire.obj-fd9dc431651e10f83e8211f11f693917.mesh"]
+
+source_file="res://data/assets/terrain_kit/Hilly_Prop_Camp_Campfire.obj"
+dest_files=["res://.godot/imported/Hilly_Prop_Camp_Campfire.obj-fd9dc431651e10f83e8211f11f693917.mesh", "res://.godot/imported/Hilly_Prop_Camp_Campfire.obj-fd9dc431651e10f83e8211f11f693917.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

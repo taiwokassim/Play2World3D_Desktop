@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bakt72litaqmm"
+path="res://.godot/imported/Hilly_Terrain_Path_Hill_Sharp_Plain_Side.obj-b85943170f1824fd66278c07ee800b15.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hilly_Terrain_Path_Hill_Sharp_Plain_Side.obj-b85943170f1824fd66278c07ee800b15.mesh"]
+
+source_file="res://data/assets/terrain_kit/Hilly_Terrain_Path_Hill_Sharp_Plain_Side.obj"
+dest_files=["res://.godot/imported/Hilly_Terrain_Path_Hill_Sharp_Plain_Side.obj-b85943170f1824fd66278c07ee800b15.mesh", "res://.godot/imported/Hilly_Terrain_Path_Hill_Sharp_Plain_Side.obj-b85943170f1824fd66278c07ee800b15.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

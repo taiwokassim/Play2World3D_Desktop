@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ccnamf5w2kq1a"
+path="res://.godot/imported/Cave_Terrain_Hill_Corner_Outer_2x2.obj-e5fd6d0a5e0e8cfca50d53db43d0834b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cave_Terrain_Hill_Corner_Outer_2x2.obj-e5fd6d0a5e0e8cfca50d53db43d0834b.mesh"]
+
+source_file="res://data/assets/terrain_kit/Cave_Terrain_Hill_Corner_Outer_2x2.obj"
+dest_files=["res://.godot/imported/Cave_Terrain_Hill_Corner_Outer_2x2.obj-e5fd6d0a5e0e8cfca50d53db43d0834b.mesh", "res://.godot/imported/Cave_Terrain_Hill_Corner_Outer_2x2.obj-e5fd6d0a5e0e8cfca50d53db43d0834b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
